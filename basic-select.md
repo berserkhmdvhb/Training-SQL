@@ -11,9 +11,9 @@ The CITY table is described as follows:
 ![img](https://s3.amazonaws.com/hr-challenge-images/8137/1449729804-f21d187d0f-CITY.jpg)
 
 ```sql
-SELECT * FROM city WHERE population > 100000 AND countrycode = 'USA'; 
+SELECT * FROM CITY WHERE POPULATION > 100000 HAVING COUNTRYCODE like "USA";
 ``` 
-	SELECT * FROM city WHERE population > 100000 AND countrycode = 'USA';  
+ 
   
   
   
@@ -21,31 +21,38 @@ SELECT * FROM city WHERE population > 100000 AND countrycode = 'USA';
   
 Query the names of all American cities in CITY with populations larger than 120000. The CountryCode for America is USA.  
   
-	SELECT name FROM city WHERE countrycode = 'USA' AND population > 120000;  
-  
-  
+```sql
+SELECT NAME FROM CITY WHERE POPULATION > 120000 AND COUNTRYCODE like "USA";
+``` 
   
 ## Select All  
   
 Query all columns (attributes) for every row in the CITY table.  
-  
-	SELECT * FROM city;  
-  
-  
+
+
+```sql
+SELECT * FROM CITY
+```  
   
 ## Select By ID  
   
 Query all columns for a city in CITY with the ID 1661.  
   
-	SELECT * FROM city WHERE id = '1661';  
-  
+
+```sql
+SELECT * FROM CITY WHERE ID = 1661
+```  
   
   
 ## Japanese Cities' Attributes  
   
 Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.  
   
-	SELECT * FROM city WHERE countrycode = 'JPN';  
+	
+
+```sql
+SELECT * FROM CITY WHERE COUNTRYCODE like 'JPN';
+```  
   
    
    
@@ -53,7 +60,10 @@ Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE f
   
 Query the names of all the Japanese cities in the CITY table. The COUNTRYCODE for Japan is JPN.  
   
-	SELECT name FROM city WHERE countrycode = 'JPN';  
+```sql
+SELECT NAME FROM CITY WHERE COUNTRYCODE like 'JPN';
+```  
+  
   
   
   
@@ -69,15 +79,17 @@ The STATION table is described as follows:
   
 where LAT_N is the northern latitude and LONG_W is the western longitude.  
   
-	SELECT city, state FROM station;  
-  
+```sql
+SELECT CITY,STATE FROM STATION;
+```  
   
   
 ## Weather Observation Station 3  
   
 Query a list of CITY names from STATION with even ID numbers only. You may print the results in any order, but must exclude duplicates from your answer.  
-  
-	SELECT DISTINCT city FROM station WHERE MOD(id, 2) = 0;  
+```sql
+SELECT UNIQUE(CITY) FROM STATION WHERE MOD(ID, 2) = 0;
+```  
   
   
   
@@ -85,8 +97,9 @@ Query a list of CITY names from STATION with even ID numbers only. You may print
   
 Let N be the number of CITY entries in STATION, and let N' be the number of distinct CITY names in STATION; query the value N-N' of from STATION. In other words, find the difference between the total number of CITY entries in the table and the number of distinct CITY entries in the table.  
   
-	SELECT COUNT(city) - COUNT(DISTINCT(city)) FROM station;   
-  
+```sql
+SELECT COUNT(CITY) - COUNT(DISTINCT(CITY)) FROM STATION;
+```  
   
   
 ## Weather Observation Station 5  
@@ -105,36 +118,39 @@ PQRS 4
 ***Explanation***  
   
 When ordered alphabetically, the CITY names are listed as ABC, DEF, PQRS, and WXY, with the respective lengths 3, 3, 4 and 3. The longest-named city is obviously PQRS, but there are 3 options for shortest-named city; we choose ABC, because it comes first alphabetically.  
-  
-	SELECT * FROM (SELECT DISTINCT city, LENGTH(city) FROM station ORDER BY LENGTH(city) ASC, city ASC) WHERE ROWNUM = 1   
-	UNION  
-	SELECT * FROM (SELECT DISTINCT city, LENGTH(city) FROM station ORDER BY LENGTH(city) DESC, city ASC) WHERE ROWNUM = 1;  
-  
-  
+ 
+```sql
+SELECT city, LENGTH(city) FROM station ORDER BY LENGTH(city) DESC,city ASC LIMIT 1;
+SELECT city, LENGTH(city) FROM station ORDER BY length(city) ASC ,city ASC FETCH first ROW ONLY;
+```  
+   
+
   
 ## Weather Observation Station 6  
   
 Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.  
   
-	SELECT DISTINCT city FROM station WHERE city LIKE 'A%' OR city LIKE 'E%' OR city LIKE 'I%' OR city LIKE 'O%' OR city LIKE 'U%';   
-  
-  
-  
+```sql
+SELECT city FROM station WHERE LOWER(city) LIKE 'a%' OR LOWER(city) LIKE 'e%' OR LOWER(city) LIKE 'i%' OR LOWER(city) LIKE 'o%' OR LOWER(city) LIKE 'u%';
+```  
+
 ## Weather Observation Station 7  
   
 Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
   
-	SELECT DISTINCT city FROM station WHERE city LIKE '%a' OR city LIKE '%e' OR city LIKE '%i' OR city LIKE '%o' OR city LIKE '%u';  
   
+```sql
+SELECT DISTINCT(city) FROM station WHERE LOWER(city) LIKE '%a' OR LOWER(city) LIKE '%e' OR LOWER(city) LIKE '%i' OR LOWER(city) LIKE '%o' OR LOWER(city) LIKE '%u';
+```  
   
   
 ## Weather Observation Station 8  
   
 Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.  
   
-	SELECT DISTINCT city FROM 
-	(SELECT DISTINCT city FROM station WHERE city LIKE 'A%' OR city LIKE 'E%' OR city LIKE 'I%' OR city LIKE 'O%' OR city LIKE 'U%') 
-	WHERE city LIKE '%a' OR city LIKE '%e' OR city LIKE '%i' OR city LIKE '%o' OR city LIKE '%u';
+```sql
+SELECT DISTINCT(city) FROM station WHERE (LOWER(city) LIKE 'a%' OR LOWER(city) LIKE 'e%' OR LOWER(city) LIKE 'i%' OR LOWER(city) LIKE 'o%' OR LOWER(city) LIKE 'u%') AND (LOWER(city) LIKE '%a' OR LOWER(city) LIKE '%e' OR LOWER(city) LIKE '%i' OR LOWER(city) LIKE '%o' OR LOWER(city) LIKE '%u');
+```  
   
   
   
@@ -142,36 +158,37 @@ Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, a
   
 Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.  
   
-	SELECT DISTINCT city FROM station WHERE NOT (city LIKE 'A%' OR city LIKE 'E%' OR city LIKE 'I%' OR city LIKE 'O%' OR city LIKE 'U%');   
-  
-  
+
+```sql
+SELECT DISTINCT(city) FROM station WHERE NOT (LOWER(city) LIKE 'a%' OR LOWER(city) LIKE 'e%' OR LOWER(city) LIKE 'i%' OR LOWER(city) LIKE 'o%' OR LOWER(city) LIKE 'u%');
+```  
   
 ## Weather Observation Station 10  
   
 Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
   
-	SELECT DISTINCT city FROM station WHERE NOT (city LIKE '%a' OR city LIKE '%e' OR city LIKE '%i' OR city LIKE '%o' OR city LIKE '%u');  
-  
+```sql
+SELECT DISTINCT(city) FROM station WHERE NOT (LOWER(city) LIKE '%a' OR LOWER(city) LIKE '%e' OR LOWER(city) LIKE '%i' OR LOWER(city) LIKE '%o' OR LOWER(city) LIKE '%u');
+```  
   
   
 ## Weather Observation Station 11  
   
 Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.  
   
-	SELECT DISTINCT city FROM station WHERE 
-	(NOT (city LIKE 'A%' OR city LIKE 'E%' OR city LIKE 'I%' OR city LIKE 'O%' OR city LIKE 'U%') 
-	OR NOT(city LIKE '%a' OR city LIKE '%e' OR city LIKE '%i' OR city LIKE '%o' OR city LIKE '%u'));   
-  
+```sql
+SELECT DISTINCT(city) FROM station WHERE NOT (LOWER(city) LIKE 'a%' OR LOWER(city) LIKE 'e%' OR LOWER(city) LIKE 'i%' OR LOWER(city) LIKE 'o%' OR LOWER(city) LIKE 'u%') OR NOT (LOWER(city) LIKE '%a' OR LOWER(city) LIKE '%e' OR LOWER(city) LIKE '%i' OR LOWER(city) LIKE '%o' OR LOWER(city) LIKE '%u');
+```  
   
   
 ## Weather Observation Station 12  
   
 Query the list of CITY names from STATION that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.  
   
-	SELECT DISTINCT city FROM station WHERE NOT 
-	((city LIKE 'A%' OR city LIKE 'E%' OR city LIKE 'I%' OR city LIKE 'O%' OR city LIKE 'U%')  
-	OR (city LIKE '%a' OR city LIKE '%e' OR city LIKE '%i' OR city LIKE '%o' OR city LIKE '%u'));
-  
+
+```sql
+SELECT DISTINCT(city) FROM station WHERE NOT (LOWER(city) LIKE 'a%' OR LOWER(city) LIKE 'e%' OR LOWER(city) LIKE 'i%' OR LOWER(city) LIKE 'o%' OR LOWER(city) LIKE 'u%') AND NOT (LOWER(city) LIKE '%a' OR LOWER(city) LIKE '%e' OR LOWER(city) LIKE '%i' OR LOWER(city) LIKE '%o' OR LOWER(city) LIKE '%u');
+```    
   
   
 ## Higher Than 75 Marks  
@@ -200,7 +217,11 @@ Belvet
   
 Only Ashley, Julia, and Belvet have Marks > 75. If you look at the last three characters of each of their names, there are no duplicates and 'ley' < 'lia' < 'vet'.   
   
-	SELECT name FROM students WHERE marks > 75 ORDER BY SUBSTR(name, LENGTH(name)-2, 3), id;
+
+
+```sql
+SELECT name FROM students WHERE marks > 75 ORDER BY RIGHT(name, 3), ID;
+``` 
   
   
   
@@ -233,12 +254,18 @@ Patrick
 Rose  
 Todd  
   
-	SELECT name FROM employee ORDER BY name;
-  
+
+```sql
+SELECT name FROM employee ORDER BY name;
+``` 
+    
   
   
 ## Employee Salaries  
   
 Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than $2000 per month who have been employees for less than 10 months. Sort your result by ascending employee_id.  
-  
-	SELECT name FROM employee WHERE salary > 2000 AND months < 10 ORDER BY employee_id;
+
+
+```sql
+SELECT name FROM employee WHERE salary > 2000 AND months < 10 ORDER BY employee_id;
+``` 
