@@ -270,5 +270,74 @@ WHERE count_chal NOT IN (
   GROUP BY count_chal
   HAVING COUNT(*) > 1 AND count_chal < (SELECT MAX(count_chal) FROM count_table)
 );
+```
 
+
+  
+## Contest Leaderboard  
+  
+You did such a great job helping Julia with her last coding contest challenge that she wants you to work on this one, too!
+
+The total score of a hacker is the sum of their maximum scores for all of the challenges. Write a query to print the hacker_id, name, and total score of the hackers ordered by the descending score. If more than one hacker achieved the same total score, then sort the result by ascending hacker_id. Exclude all hackers with a total score of `0` from your result. 
+  
+***Input Format***  
+  
+The following tables contain contest data:
+  
+- Hackers: The hacker_id is the id of the hacker, and name is the
+  
+![img](https://s3.amazonaws.com/hr-challenge-images/19503/1458522826-a9ddd28469-ScreenShot2016-03-21at6.40.27AM.png)  
+  
+- Submissions: The submission_id is the id of the submission, hacker_id is the id of the hacker who made the submission, challenge_id is the id of the challenge for which the submission belongs to, and score is the score of the submission.
+  
+![img](https://s3.amazonaws.com/hr-challenge-images/19503/1458523022-771511df90-ScreenShot2016-03-21at6.40.37AM.png)  
+  
+***Sample Input***  
+  
+Hackers Table:   
+![img]([https://s3.amazonaws.com/hr-challenge-images/19506/1458521384-34c6866dae-ScreenShot2016-03-21at6.07.15AM.png](https://s3.amazonaws.com/hr-challenge-images/19503/1458523374-7ecc39010f-ScreenShot2016-03-21at6.51.56AM.png))  
+  
+Submissions Table:  
+![img](https://s3.amazonaws.com/hr-challenge-images/19503/1458523388-0896218137-ScreenShot2016-03-21at6.51.45AM.png)  
+  
+***Sample Output***
+  
+```  
+4071 Rose 191
+74842 Lisa 174
+84072 Bonnie 100
+4806 Angela 89
+26071 Frank 85
+80305 Kimberly 67
+49438 Patrick 43
+```
+
+  
+***Explanation***  
+  
+Hacker 4071 submitted solutions for challenges 19797 and 49593, so the total score $= 95 + max(43,96) = 191$.
+Hacker 74842 submitted solutions for challenges 19797 and 63132, so the total score $= max(98,5) + 76 = 174$
+Hacker 84072 submitted solutions for challenges 49593 and 63132, so the total score $= 100 + 0 = 100.$
+The total scores for hackers 4806, 26071, 80305, and 49438 can be similarly calculated.
+```sql
+WITH joint AS
+(
+SELECT hackers.name, challenges.challenge_id, challenges.hacker_id FROM hackers INNER JOIN challenges ON hackers.hacker_id = challenges.hacker_id 
+),
+count_table AS
+(
+SELECT COUNT(challenge_id) AS count_chal, hacker_id FROM challenges GROUP BY hacker_id
+),
+top_students AS
+(
+SELECT DISTINCT joint.hacker_id,joint.name,count_table.count_chal FROM joint INNER JOIN count_table ON joint.hacker_id = count_table.hacker_id ORDER BY count_table.count_chal DESC, joint.hacker_id
+)
+SELECT *
+FROM top_students
+WHERE count_chal NOT IN (
+  SELECT count_chal
+  FROM top_students
+  GROUP BY count_chal
+  HAVING COUNT(*) > 1 AND count_chal < (SELECT MAX(count_chal) FROM count_table)
+);
 ```
