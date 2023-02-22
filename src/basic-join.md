@@ -175,7 +175,19 @@ Wands_Property Table:
 14 40 5408 1  
   
 ```sql
-
+WITH joint AS 
+(
+SELECT wands.id,wands_property.age, wands.coins_needed, wands.power 
+FROM wands 
+INNER JOIN wands_property 
+ON wands.code = wands_property.code 
+WHERE wands_property.is_evil = 0  
+),
+grouped AS 
+(
+SELECT age, MIN(coins_needed) AS min_coin, power FROM joint GROUP BY age,power
+)
+SELECT joint.id,joint.age,grouped.min_coin,joint.power FROM joint JOIN grouped ON joint.coins_needed = grouped.min_coin AND joint.age = grouped.age AND joint.power=grouped.power ORDER BY power DESC,age DESC;
 ```
   
   
