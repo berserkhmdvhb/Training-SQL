@@ -250,5 +250,25 @@ For Sample Case 1, we can get the following details:
 Students 12299 and 34856 both created 6 challenges. Because 6 is the maximum number of challenges created, these students are included in the result.  
   
 ```sql
+WITH joint AS
+(
+SELECT hackers.name, challenges.challenge_id, challenges.hacker_id FROM hackers INNER JOIN challenges ON hackers.hacker_id = challenges.hacker_id 
+),
+count_table AS
+(
+SELECT COUNT(challenge_id) AS count_chal, hacker_id FROM challenges GROUP BY hacker_id
+),
+top_students AS
+(
+SELECT DISTINCT joint.hacker_id,joint.name,count_table.count_chal FROM joint INNER JOIN count_table ON joint.hacker_id = count_table.hacker_id ORDER BY count_table.count_chal DESC, joint.hacker_id
+)
+SELECT *
+FROM top_students
+WHERE count_chal NOT IN (
+  SELECT count_chal
+  FROM top_students
+  GROUP BY count_chal
+  HAVING COUNT(*) > 1 AND count_chal < (SELECT MAX(count_chal) FROM count_table)
+);
 
 ```
