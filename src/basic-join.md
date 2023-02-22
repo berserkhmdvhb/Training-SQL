@@ -101,7 +101,14 @@ Submissions: The submission_id is the id of the submission, hacker_id is the id 
 ![img](https://s3.amazonaws.com/hr-challenge-images/19504/1458527077-298f8e922a-ScreenShot2016-03-21at7.46.29AM.png)  
   
 ```sql
-
+SELECT submissions.hacker_id, hackers.name from hackers, submissions, challenges, difficulty
+WHERE submissions.score = difficulty.score
+AND hackers.hacker_id = submissions.hacker_id 
+AND submissions.challenge_id = challenges.challenge_id 
+AND challenges.difficulty_level = difficulty.difficulty_level
+GROUP BY submissions.hacker_id, hackers.name
+HAVING count(*) > 1 
+ORDER BY count(*) DESC, submissions.hacker_id ASC;
 ```
   
 ## Ollivander's Inventory  
