@@ -1,5 +1,5 @@
 # SQL-hackerrank
-This repository is dedicated to the SQL challenges from [hackerrank](https://www.hackerrank.com/domains/sql website.
+This repository is dedicated to the SQL challenges from [hackerrank](https://www.hackerrank.com/domains/sql) website.
 
 # Sections
 
