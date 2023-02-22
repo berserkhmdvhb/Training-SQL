@@ -110,7 +110,28 @@ GROUP BY submissions.hacker_id, hackers.name
 HAVING count(*) > 1 
 ORDER BY count(*) DESC, submissions.hacker_id ASC;
 ```
+More complicated attempt:
+
   
+```sql
+WITH chal_dif AS 
+(
+SELECT challenges.challenge_id,difficulty.score FROM challenges INNER JOIN difficulty ON challenges.difficulty_level = difficulty.difficulty_level 
+),
+chal_dif_sub AS
+(
+SELECT submissions.submission_id,submissions.hacker_id,submissions.challenge_id,chal_dif.score FROM chal_dif INNER JOIN submissions ON chal_dif.challenge_id = submissions.challenge_id
+), 
+chal_dif_sub_hack AS
+(
+SELECT hackers.name,chal_dif_sub.hacker_id,chal_dif_sub.submission_id,chal_dif_sub.challenge_id,chal_dif_sub.score FROM chal_dif_sub INNER JOIN hackers ON hackers.hacker_id = chal_dif_sub.hacker_id
+),
+top_hackers AS
+(
+SELECT hacker_id,name, COUNT(*) AS top_score_count FROM chal_dif_sub_hack GROUP BY name,hacker_id
+)
+SELECT hacker_id,name FROM top_hackers WHERE top_score_count > 1 ORDER BY top_score_count DESC, hacker_id ASC
+```
 ## Ollivander's Inventory  
   
 Harry Potter and his friends are at Ollivander's with Ron, finally replacing Charlie's old broken wand.  
