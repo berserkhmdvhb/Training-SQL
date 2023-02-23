@@ -320,24 +320,13 @@ Hacker 74842 submitted solutions for challenges 19797 and 63132, so the total sc
 Hacker 84072 submitted solutions for challenges 49593 and 63132, so the total score $= 100 + 0 = 100.$
 The total scores for hackers 4806, 26071, 80305, and 49438 can be similarly calculated.
 ```sql
-WITH joint AS
+WITH top_score AS  
 (
-SELECT hackers.name, challenges.challenge_id, challenges.hacker_id FROM hackers INNER JOIN challenges ON hackers.hacker_id = challenges.hacker_id 
-),
-count_table AS
+SELECT MAX(score) AS mscore,hacker_id,challenge_id FROM submissions GROUP BY hacker_id,challenge_id 
+), 
+total_score_tbl AS
 (
-SELECT COUNT(challenge_id) AS count_chal, hacker_id FROM challenges GROUP BY hacker_id
-),
-top_students AS
-(
-SELECT DISTINCT joint.hacker_id,joint.name,count_table.count_chal FROM joint INNER JOIN count_table ON joint.hacker_id = count_table.hacker_id ORDER BY count_table.count_chal DESC, joint.hacker_id
+SELECT SUM(mscore) as total_score, hacker_id FROM top_score GROUP BY hacker_id
 )
-SELECT *
-FROM top_students
-WHERE count_chal NOT IN (
-  SELECT count_chal
-  FROM top_students
-  GROUP BY count_chal
-  HAVING COUNT(*) > 1 AND count_chal < (SELECT MAX(count_chal) FROM count_table)
-);
+SELECT hackers.hacker_id,hackers.name,total_score_tbl.total_score FROM total_score_tbl JOIN hackers ON hackers.hacker_id = total_score_tbl.hacker_id WHERE total_score>0 ORDER BY total_score_tbl.total_score DESC, hackers.hacker_id ASC;
 ```
