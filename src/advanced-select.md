@@ -145,12 +145,14 @@ Inner: If node is neither root nor leaf node.
 ![img](https://s3.amazonaws.com/hr-challenge-images/12888/1443773633-f9e6fd314e-simply_sql_bst.png)  
   
 ```sql
-CREATE VIEW pq AS (SELECT CASE WHEN occupation = 'Doctor' THEN name END AS 'Doctor', 
-                   CASE WHEN occupation = 'Professor' THEN name END AS 'Professor', 
-                   CASE WHEN occupation = 'Singer' THEN name END AS  'Singer', 
-                   CASE WHEN occupation = 'Actor' THEN name END AS  'Actor', 
-                   ROW_NUMBER() OVER (PARTITION BY occupation ORDER BY name) as cr FROM occupations);
-SELECT MAX(Doctor),MAX(Professor),MAX(Singer),MAX(Actor) FROM pq GROUP BY cr;
+SELECT N,
+CASE
+WHEN P IS NULL THEN 'Root'
+WHEN N IN (SELECT P FROM BST) THEN 'Inner'
+ELSE 'Leaf'
+END
+FROM BST
+ORDER by N;
 ``` 
   
   
