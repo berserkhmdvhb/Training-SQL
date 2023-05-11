@@ -1,1 +1,0 @@
-SELECT first_name, last_name FROM dbo.employees ORDER BY hire_date OFFSET 2 ROWS FETCH NEXT 3 ROWS ONLY

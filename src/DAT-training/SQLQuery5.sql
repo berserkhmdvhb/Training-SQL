@@ -1,1 +1,0 @@
-SELECT origin_country_id, COUNT(DISTINCT fruit_id) AS country_fruits_count FROM fruits GROUP BY origin_country_id  ORDER BY country_fruits_count
