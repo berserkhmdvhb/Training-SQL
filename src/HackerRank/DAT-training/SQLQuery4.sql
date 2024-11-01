@@ -1,0 +1,1 @@
+SELECT employees.first_name, employees.last_name, jobs.job_id, jobs.job_title FROM employees JOIN jobs ON employees.job_id = jobs.job_id WHERE jobs.job_title = 'Programmer' ORDER BY first_name
