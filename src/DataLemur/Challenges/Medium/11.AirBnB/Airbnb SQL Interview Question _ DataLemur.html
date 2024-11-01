@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://datalemur.com/questions/booking-referral-source -->
+<html lang="en" translate="no" coupert-item="9AF8D9A4E502F3784AD24272D81F0381" data-theme="light" style="color-scheme: light;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="ace-tomorrow">.ace-tomorrow .ace_gutter {
+  background: #f6f6f6;
+  color: #4D4D4C
+}
+
+.ace-tomorrow .ace_print-margin {
+  width: 1px;
+  background: #f6f6f6
+}
+
+.ace-tomorrow {
+  background-color: #FFFFFF;
+  color: #4D4D4C
+}
+
+.ace-tomorrow .ace_cursor {
+  color: #AEAFAD
+}
+
+.ace-tomorrow .ace_marker-layer .ace_selection {
+  background: #D6D6D6
+}
+
+.ace-tomorrow.ace_multiselect .ace_selection.ace_start {
+  box-shadow: 0 0 3px 0px #FFFFFF;
+}
+
+.ace-tomorrow .ace_marker-layer .ace_step {
+  background: rgb(255, 255, 0)
+}
+
+.ace-tomorrow .ace_marker-layer .ace_bracket {
+  margin: -1px 0 0 -1px;
+  border: 1px solid #D1D1D1
+}
+
+.ace-tomorrow .ace_marker-layer .ace_active-line {
+  background: #EFEFEF
+}
+
+.ace-tomorrow .ace_gutter-active-line {
+  background-color : #dcdcdc
+}
+
+.ace-tomorrow .ace_marker-layer .ace_selected-word {
+  border: 1px solid #D6D6D6
+}
+
+.ace-tomorrow .ace_invisible {
+  color: #D1D1D1
+}
+
+.ace-tomorrow .ace_keyword,
+.ace-tomorrow .ace_meta,
+.ace-tomorrow .ace_storage,
+.ace-tomorrow .ace_storage.ace_type,
+.ace-tomorrow .ace_support.ace_type {
+  color: #8959A8
+}
+
+.ace-tomorrow .ace_keyword.ace_operator {
+  color: #3E999F
+}
+
+.ace-tomorrow .ace_constant.ace_character,
+.ace-tomorrow .ace_constant.ace_language,
+.ace-tomorrow .ace_constant.ace_numeric,
+.ace-tomorrow .ace_keyword.ace_other.ace_unit,
+.ace-tomorrow .ace_support.ace_constant,
+.ace-tomorrow .ace_variable.ace_parameter {
+  color: #F5871F
+}
+
+.ace-tomorrow .ace_constant.ace_other {
+  color: #666969
+}
+
+.ace-tomorrow .ace_invalid {
+  color: #FFFFFF;
+  background-color: #C82829
+}
+
+.ace-tomorrow .ace_invalid.ace_deprecated {
+  color: #FFFFFF;
+  background-color: #8959A8
+}
+
+.ace-tomorrow .ace_fold {
+  background-color: #4271AE;
+  border-color: #4D4D4C
+}
+
+.ace-tomorrow .ace_entity.ace_name.ace_function,
+.ace-tomorrow .ace_support.ace_function,
+.ace-tomorrow .ace_variable {
+  color: #4271AE
+}
+
+.ace-tomorrow .ace_support.ace_class,
+.ace-tomorrow .ace_support.ace_type {
+  color: #C99E00
+}
+
+.ace-tomorrow .ace_heading,
+.ace-tomorrow .ace_markup.ace_heading,
+.ace-tomorrow .ace_string {
+  color: #718C00
+}
+
+.ace-tomorrow .ace_entity.ace_name.ace_tag,
+.ace-tomorrow .ace_entity.ace_other.ace_attribute-name,
+.ace-tomorrow .ace_meta.ace_tag,
+.ace-tomorrow .ace_string.ace_regexp,
+.ace-tomorrow .ace_variable {
+  color: #C82829
+}
+
+.ace-tomorrow .ace_comment {
+  color: #8E908C
+}
+
+.ace-tomorrow .ace_indent-guide {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bdu3f/BwAlfgctduB85QAAAABJRU5ErkJggg==) right repeat-y
+}
+
+.ace-tomorrow .ace_indent-guide-active {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAZSURBVHjaYvj///9/hivKyv8BAAAA//8DACLqBhbvk+/eAAAAAElFTkSuQmCC") right repeat-y;
+} 
+
+/*# sourceURL=ace/css/ace-tomorrow */</style><style id="autocompletion.css">
+.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {
+    background-color: #CAD6FA;
+    z-index: 1;
+}
+.ace_dark.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {
+    background-color: #3a674e;
+}
+.ace_editor.ace_autocomplete .ace_line-hover {
+    border: 1px solid #abbffe;
+    margin-top: -1px;
+    background: rgba(233,233,253,0.4);
+    position: absolute;
+    z-index: 2;
+}
+.ace_dark.ace_editor.ace_autocomplete .ace_line-hover {
+    border: 1px solid rgba(109, 150, 13, 0.8);
+    background: rgba(58, 103, 78, 0.62);
+}
+.ace_completion-meta {
+    opacity: 0.5;
+    margin-left: 0.9em;
+}
+.ace_completion-message {
+    margin-left: 0.9em;
+    color: blue;
+}
+.ace_editor.ace_autocomplete .ace_completion-highlight{
+    color: #2d69c7;
+}
+.ace_dark.ace_editor.ace_autocomplete .ace_completion-highlight{
+    color: #93ca12;
+}
+.ace_editor.ace_autocomplete {
+    width: 300px;
+    z-index: 200000;
+    border: 1px lightgray solid;
+    position: fixed;
+    box-shadow: 2px 3px 5px rgba(0,0,0,.2);
+    line-height: 1.4;
+    background: #fefefe;
+    color: #111;
+}
+.ace_dark.ace_editor.ace_autocomplete {
+    border: 1px #484747 solid;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.51);
+    line-height: 1.4;
+    background: #25282c;
+    color: #c1c1c1;
+}
+.ace_autocomplete .ace_text-layer  {
+    width: calc(100% - 8px);
+}
+.ace_autocomplete .ace_line {
+    display: flex;
+    align-items: center;
+}
+.ace_autocomplete .ace_line > * {
+    min-width: 0;
+    flex: 0 0 auto;
+}
+.ace_autocomplete .ace_line .ace_ {
+    flex: 0 1 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.ace_autocomplete .ace_completion-spacer {
+    flex: 1;
+}
+.ace_autocomplete.ace_loading:after  {
+    content: "";
+    position: absolute;
+    top: 0px;
+    height: 2px;
+    width: 8%;
+    background: blue;
+    z-index: 100;
+    animation: ace_progress 3s infinite linear;
+    animation-delay: 300ms;
+    transform: translateX(-100%) scaleX(1);
+}
+@keyframes ace_progress {
+    0% { transform: translateX(-100%) scaleX(1) }
+    50% { transform: translateX(625%) scaleX(2) } 
+    100% { transform: translateX(1500%) scaleX(3) } 
+}
+@media (prefers-reduced-motion) {
+    .ace_autocomplete.ace_loading:after {
+        transform: translateX(625%) scaleX(2);
+        animation: none;
+     }
+}
+
+/*# sourceURL=ace/css/autocompletion.css */</style><style id="snippets.css">
+.ace_snippet-marker {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: rgba(194, 193, 208, 0.09);
+    border: 1px dotted rgba(211, 208, 235, 0.62);
+    position: absolute;
+}
+/*# sourceURL=ace/css/snippets.css */</style><style id="error_marker.css">
+    .error_widget_wrapper {
+        background: inherit;
+        color: inherit;
+        border:none
+    }
+    .error_widget {
+        border-top: solid 2px;
+        border-bottom: solid 2px;
+        margin: 5px 0;
+        padding: 10px 40px;
+        white-space: pre-wrap;
+    }
+    .error_widget.ace_error, .error_widget_arrow.ace_error{
+        border-color: #ff5a5a
+    }
+    .error_widget.ace_warning, .error_widget_arrow.ace_warning{
+        border-color: #F1D817
+    }
+    .error_widget.ace_info, .error_widget_arrow.ace_info{
+        border-color: #5a5a5a
+    }
+    .error_widget.ace_ok, .error_widget_arrow.ace_ok{
+        border-color: #5aaa5a
+    }
+    .error_widget_arrow {
+        position: absolute;
+        border: solid 5px;
+        border-top-color: transparent!important;
+        border-right-color: transparent!important;
+        border-left-color: transparent!important;
+        top: -5px;
+    }
+
+/*# sourceURL=ace/css/error_marker.css */</style><style id="ace-tm">.ace-tm .ace_gutter {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.ace-tm .ace_print-margin {
+  width: 1px;
+  background: #e8e8e8;
+}
+
+.ace-tm .ace_fold {
+    background-color: #6B72E6;
+}
+
+.ace-tm {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.ace-tm .ace_cursor {
+  color: black;
+}
+        
+.ace-tm .ace_invisible {
+  color: rgb(191, 191, 191);
+}
+
+.ace-tm .ace_storage,
+.ace-tm .ace_keyword {
+  color: blue;
+}
+
+.ace-tm .ace_constant {
+  color: rgb(197, 6, 11);
+}
+
+.ace-tm .ace_constant.ace_buildin {
+  color: rgb(88, 72, 246);
+}
+
+.ace-tm .ace_constant.ace_language {
+  color: rgb(88, 92, 246);
+}
+
+.ace-tm .ace_constant.ace_library {
+  color: rgb(6, 150, 14);
+}
+
+.ace-tm .ace_invalid {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: red;
+}
+
+.ace-tm .ace_support.ace_function {
+  color: rgb(60, 76, 114);
+}
+
+.ace-tm .ace_support.ace_constant {
+  color: rgb(6, 150, 14);
+}
+
+.ace-tm .ace_support.ace_type,
+.ace-tm .ace_support.ace_class {
+  color: rgb(109, 121, 222);
+}
+
+.ace-tm .ace_keyword.ace_operator {
+  color: rgb(104, 118, 135);
+}
+
+.ace-tm .ace_string {
+  color: rgb(3, 106, 7);
+}
+
+.ace-tm .ace_comment {
+  color: rgb(76, 136, 107);
+}
+
+.ace-tm .ace_comment.ace_doc {
+  color: rgb(0, 102, 255);
+}
+
+.ace-tm .ace_comment.ace_doc.ace_tag {
+  color: rgb(128, 159, 191);
+}
+
+.ace-tm .ace_constant.ace_numeric {
+  color: rgb(0, 0, 205);
+}
+
+.ace-tm .ace_variable {
+  color: rgb(49, 132, 149);
+}
+
+.ace-tm .ace_xml-pe {
+  color: rgb(104, 104, 91);
+}
+
+.ace-tm .ace_entity.ace_name.ace_function {
+  color: #0000A2;
+}
+
+
+.ace-tm .ace_heading {
+  color: rgb(12, 7, 255);
+}
+
+.ace-tm .ace_list {
+  color:rgb(185, 6, 144);
+}
+
+.ace-tm .ace_meta.ace_tag {
+  color:rgb(0, 22, 142);
+}
+
+.ace-tm .ace_string.ace_regex {
+  color: rgb(255, 0, 0)
+}
+
+.ace-tm .ace_marker-layer .ace_selection {
+  background: rgb(181, 213, 255);
+}
+.ace-tm.ace_multiselect .ace_selection.ace_start {
+  box-shadow: 0 0 3px 0px white;
+}
+.ace-tm .ace_marker-layer .ace_step {
+  background: rgb(252, 255, 0);
+}
+
+.ace-tm .ace_marker-layer .ace_stack {
+  background: rgb(164, 229, 101);
+}
+
+.ace-tm .ace_marker-layer .ace_bracket {
+  margin: -1px 0 0 -1px;
+  border: 1px solid rgb(192, 192, 192);
+}
+
+.ace-tm .ace_marker-layer .ace_active-line {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.ace-tm .ace_gutter-active-line {
+    background-color : #dcdcdc;
+}
+
+.ace-tm .ace_marker-layer .ace_selected-word {
+  background: rgb(250, 250, 255);
+  border: 1px solid rgb(200, 200, 250);
+}
+
+.ace-tm .ace_indent-guide {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;
+}
+
+.ace-tm .ace_indent-guide-active {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAZSURBVHjaYvj///9/hivKyv8BAAAA//8DACLqBhbvk+/eAAAAAElFTkSuQmCC") right repeat-y;
+}
+
+/*# sourceURL=ace/css/ace-tm */</style><style id="ace_editor.css">
+.ace_br1 {border-top-left-radius    : 3px;}
+.ace_br2 {border-top-right-radius   : 3px;}
+.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}
+.ace_br4 {border-bottom-right-radius: 3px;}
+.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}
+.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}
+.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}
+.ace_br8 {border-bottom-left-radius : 3px;}
+.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}
+.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}
+.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}
+.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}
+.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}
+.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}
+.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+
+
+.ace_editor {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Source Code Pro', 'source-code-pro', monospace;
+    direction: ltr;
+    text-align: left;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.ace_scroller {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    background-color: inherit;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: text;
+}
+
+.ace_content {
+    position: absolute;
+    box-sizing: border-box;
+    min-width: 100%;
+    contain: style size layout;
+    font-variant-ligatures: no-common-ligatures;
+}
+
+.ace_keyboard-focus:focus {
+    box-shadow: inset 0 0 0 2px #5E9ED6;
+    outline: none;
+}
+
+.ace_dragging .ace_scroller:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: rgba(250, 250, 250, 0.01);
+    z-index: 1000;
+}
+.ace_dragging.ace_dark .ace_scroller:before{
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.ace_gutter {
+    position: absolute;
+    overflow : hidden;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    cursor: default;
+    z-index: 4;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    contain: style size layout;
+}
+
+.ace_gutter-active-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.ace_scroller.ace_scroll-left:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;
+    pointer-events: none;
+}
+
+.ace_gutter-cell, .ace_gutter-cell_svg-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 19px;
+    padding-right: 6px;
+    background-repeat: no-repeat;
+}
+
+.ace_gutter-cell_svg-icons .ace_gutter_annotation {
+    margin-left: -14px;
+    float: left;
+}
+
+.ace_gutter-cell .ace_gutter_annotation {
+    margin-left: -19px;
+    float: left;
+}
+
+.ace_gutter-cell.ace_error, .ace_icon.ace_error, .ace_icon.ace_error_fold {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}
+
+.ace_gutter-cell.ace_warning, .ace_icon.ace_warning, .ace_icon.ace_warning_fold {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}
+
+.ace_gutter-cell.ace_info, .ace_icon.ace_info {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}
+.ace_dark .ace_gutter-cell.ace_info, .ace_dark .ace_icon.ace_info {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");
+}
+
+.ace_icon_svg.ace_error {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJyZWQiIHNoYXBlLXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIj4KPGNpcmNsZSBmaWxsPSJub25lIiBjeD0iOCIgY3k9IjgiIHI9IjciIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGxpbmUgeDE9IjExIiB5MT0iNSIgeDI9IjUiIHkyPSIxMSIvPgo8bGluZSB4MT0iMTEiIHkxPSIxMSIgeDI9IjUiIHkyPSI1Ii8+CjwvZz4KPC9zdmc+");
+    background-color: crimson;
+}
+.ace_icon_svg.ace_warning {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJkYXJrb3JhbmdlIiBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiI+Cjxwb2x5Z29uIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiIHBvaW50cz0iOCAxIDE1IDE1IDEgMTUgOCAxIi8+CjxyZWN0IHg9IjgiIHk9IjEyIiB3aWR0aD0iMC4wMSIgaGVpZ2h0PSIwLjAxIi8+CjxsaW5lIHgxPSI4IiB5MT0iNiIgeDI9IjgiIHkyPSIxMCIvPgo8L2c+Cjwvc3ZnPg==");
+    background-color: darkorange;
+}
+.ace_icon_svg.ace_info {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJibHVlIiBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiI+CjxjaXJjbGUgZmlsbD0ibm9uZSIgY3g9IjgiIGN5PSI4IiByPSI3IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjxwb2x5bGluZSBwb2ludHM9IjggMTEgOCA4Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjkgOCA2IDgiLz4KPGxpbmUgeDE9IjEwIiB5MT0iMTEiIHgyPSI2IiB5Mj0iMTEiLz4KPHJlY3QgeD0iOCIgeT0iNSIgd2lkdGg9IjAuMDEiIGhlaWdodD0iMC4wMSIvPgo8L2c+Cjwvc3ZnPg==");
+    background-color: royalblue;
+}
+
+.ace_icon_svg.ace_error_fold {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0ibSAxOC45Mjk4NTEsNy44Mjk4MDc2IGMgMC4xNDYzNTMsNi4zMzc0NjA0IC02LjMyMzE0Nyw3Ljc3Nzg0NDQgLTcuNDc3OTEyLDcuNzc3ODQ0NCAtMi4xMDcyNzI2LC0wLjEyODc1IDUuMTE3Njc4LDAuMzU2MjQ5IDUuMDUxNjk4LC03Ljg3MDA2MTggLTAuNjA0NjcyLC04LjAwMzk3MzQ5IC03LjA3NzI3MDYsLTcuNTYzMTE4OSAtNC44NTczLC03LjQzMDM5NTU2IDEuNjA2LC0wLjExNTE0MjI1IDYuODk3NDg1LDEuMjYyNTQ1OTYgNy4yODM1MTQsNy41MjI2MTI5NiB6IiBmaWxsPSJjcmltc29uIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibSA4LjExNDc1NjIsMi4wNTI5ODI4IGMgMy4zNDkxNjk4LDAgNi4wNjQxMzI4LDIuNjc2ODYyNyA2LjA2NDEzMjgsNS45Nzg5NTMgMCwzLjMwMjExMjIgLTIuNzE0OTYzLDUuOTc4OTIwMiAtNi4wNjQxMzI4LDUuOTc4OTIwMiAtMy4zNDkxNDczLDAgLTYuMDY0MTc3MiwtMi42NzY4MDggLTYuMDY0MTc3MiwtNS45Nzg5MjAyIDAuMDA1MzksLTMuMjk5ODg2MSAyLjcxNzI2NTYsLTUuOTczNjQwOCA2LjA2NDE3NzIsLTUuOTc4OTUzIHogbSAwLC0xLjczNTgyNzE5IGMgLTQuMzIxNDgzNiwwIC03LjgyNDc0MDM4LDMuNDU0MDE4NDkgLTcuODI0NzQwMzgsNy43MTQ3ODAxOSAwLDQuMjYwNzI4MiAzLjUwMzI1Njc4LDcuNzE0NzQ1MiA3LjgyNDc0MDM4LDcuNzE0NzQ1MiA0LjMyMTQ0OTgsMCA3LjgyNDY5OTgsLTMuNDU0MDE3IDcuODI0Njk5OCwtNy43MTQ3NDUyIDAsLTIuMDQ2MDkxNCAtMC44MjQzOTIsLTQuMDA4MzY3MiAtMi4yOTE3NTYsLTUuNDU1MTc0NiBDIDEyLjE4MDIyNSwxLjEyOTk2NDggMTAuMTkwMDEzLDAuMzE3MTU1NjEgOC4xMTQ3NTYyLDAuMzE3MTU1NjEgWiBNIDYuOTM3NDU2Myw4LjI0MDU5ODUgNC42NzE4Njg1LDEwLjQ4NTg1MiA2LjAwODY4MTQsMTEuODc2NzI4IDguMzE3MDAzNSw5LjYwMDc5MTEgMTAuNjI1MzM3LDExLjg3NjcyOCAxMS45NjIxMzgsMTAuNDg1ODUyIDkuNjk2NTUwOCw4LjI0MDU5ODUgMTEuOTYyMTM4LDYuMDA2ODA2NiAxMC41NzMyNDYsNC42Mzc0MzM1IDguMzE3MDAzNSw2Ljg3MzQyOTcgNi4wNjA3NjA3LDQuNjM3NDMzNSA0LjY3MTg2ODUsNi4wMDY4MDY2IFoiIGZpbGw9ImNyaW1zb24iIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=");
+    background-color: crimson;
+}
+.ace_icon_svg.ace_warning_fold {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyMCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC43NzY5IDE0LjczMzdMOC42NTE5MiAyLjQ4MzY5QzguMzI5NDYgMS44Mzg3NyA3LjQwOTEzIDEuODM4NzcgNy4wODY2NyAyLjQ4MzY5TDAuOTYxNjY5IDE0LjczMzdDMC42NzA3NzUgMTUuMzE1NSAxLjA5MzgzIDE2IDEuNzQ0MjkgMTZIMTMuOTk0M0MxNC42NDQ4IDE2IDE1LjA2NzggMTUuMzE1NSAxNC43NzY5IDE0LjczMzdaTTMuMTYwMDcgMTQuMjVMNy44NjkyOSA0LjgzMTU2TDEyLjU3ODUgMTQuMjVIMy4xNjAwN1pNOC43NDQyOSAxMS42MjVWMTMuMzc1SDYuOTk0MjlWMTEuNjI1SDguNzQ0MjlaTTYuOTk0MjkgMTAuNzVWNy4yNUg4Ljc0NDI5VjEwLjc1SDYuOTk0MjlaIiBmaWxsPSIjRUM3MjExIi8+CjxwYXRoIGQ9Ik0xMS4xOTkxIDIuOTUyMzhDMTAuODgwOSAyLjMxNDY3IDEwLjM1MzcgMS44MDUyNiA5LjcwNTUgMS41MDlMMTEuMDQxIDEuMDY5NzhDMTEuNjg4MyAwLjk0OTgxNCAxMi4zMzcgMS4yNzI2MyAxMi42MzE3IDEuODYxNDFMMTcuNjEzNiAxMS44MTYxQzE4LjM1MjcgMTMuMjkyOSAxNy41OTM4IDE1LjA4MDQgMTYuMDE4IDE1LjU3NDVDMTYuNDA0NCAxNC40NTA3IDE2LjMyMzEgMTMuMjE4OCAxNS43OTI0IDEyLjE1NTVMMTEuMTk5MSAyLjk1MjM4WiIgZmlsbD0iI0VDNzIxMSIvPgo8L3N2Zz4=");
+    background-color: darkorange;
+}
+
+.ace_scrollbar {
+    contain: strict;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+}
+
+.ace_scrollbar-inner {
+    position: absolute;
+    cursor: text;
+    left: 0;
+    top: 0;
+}
+
+.ace_scrollbar-v{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 0;
+}
+
+.ace_scrollbar-h {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    left: 0;
+}
+
+.ace_print-margin {
+    position: absolute;
+    height: 100%;
+}
+
+.ace_text-input {
+    position: absolute;
+    z-index: 0;
+    width: 0.5em;
+    height: 1em;
+    opacity: 0;
+    background: transparent;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    font: inherit;
+    padding: 0 1px;
+    margin: 0 -1px;
+    contain: strict;
+    -ms-user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    user-select: text;
+    /*with `pre-line` chrome inserts &nbsp; instead of space*/
+    white-space: pre!important;
+}
+.ace_text-input.ace_composition {
+    background: transparent;
+    color: inherit;
+    z-index: 1000;
+    opacity: 1;
+}
+.ace_composition_placeholder { color: transparent }
+.ace_composition_marker { 
+    border-bottom: 1px solid;
+    position: absolute;
+    border-radius: 0;
+    margin-top: 1px;
+}
+
+[ace_nocontext=true] {
+    transform: none!important;
+    filter: none!important;
+    clip-path: none!important;
+    mask : none!important;
+    contain: none!important;
+    perspective: none!important;
+    mix-blend-mode: initial!important;
+    z-index: auto;
+}
+
+.ace_layer {
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    /* workaround for chrome bug https://github.com/ajaxorg/ace/issues/2312*/
+    word-wrap: normal;
+    white-space: pre;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    /* setting pointer-events: auto; on node under the mouse, which changes
+        during scroll, will break mouse wheel scrolling in Safari */
+    pointer-events: none;
+}
+
+.ace_gutter-layer {
+    position: relative;
+    width: auto;
+    text-align: right;
+    pointer-events: auto;
+    height: 1000000px;
+    contain: style size layout;
+}
+
+.ace_text-layer {
+    font: inherit !important;
+    position: absolute;
+    height: 1000000px;
+    width: 1000000px;
+    contain: style size layout;
+}
+
+.ace_text-layer > .ace_line, .ace_text-layer > .ace_line_group {
+    contain: style size layout;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.ace_hidpi .ace_text-layer,
+.ace_hidpi .ace_gutter-layer,
+.ace_hidpi .ace_content,
+.ace_hidpi .ace_gutter {
+    contain: strict;
+}
+.ace_hidpi .ace_text-layer > .ace_line, 
+.ace_hidpi .ace_text-layer > .ace_line_group {
+    contain: strict;
+}
+
+.ace_cjk {
+    display: inline-block;
+    text-align: center;
+}
+
+.ace_cursor-layer {
+    z-index: 4;
+}
+
+.ace_cursor {
+    z-index: 4;
+    position: absolute;
+    box-sizing: border-box;
+    border-left: 2px solid;
+    /* workaround for smooth cursor repaintng whole screen in chrome */
+    transform: translatez(0);
+}
+
+.ace_multiselect .ace_cursor {
+    border-left-width: 1px;
+}
+
+.ace_slim-cursors .ace_cursor {
+    border-left-width: 1px;
+}
+
+.ace_overwrite-cursors .ace_cursor {
+    border-left-width: 0;
+    border-bottom: 1px solid;
+}
+
+.ace_hidden-cursors .ace_cursor {
+    opacity: 0.2;
+}
+
+.ace_hasPlaceholder .ace_hidden-cursors .ace_cursor {
+    opacity: 0;
+}
+
+.ace_smooth-blinking .ace_cursor {
+    transition: opacity 0.18s;
+}
+
+.ace_animate-blinking .ace_cursor {
+    animation-duration: 1000ms;
+    animation-timing-function: step-end;
+    animation-name: blink-ace-animate;
+    animation-iteration-count: infinite;
+}
+
+.ace_animate-blinking.ace_smooth-blinking .ace_cursor {
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-name: blink-ace-animate-smooth;
+}
+    
+@keyframes blink-ace-animate {
+    from, to { opacity: 1; }
+    60% { opacity: 0; }
+}
+
+@keyframes blink-ace-animate-smooth {
+    from, to { opacity: 1; }
+    45% { opacity: 1; }
+    60% { opacity: 0; }
+    85% { opacity: 0; }
+}
+
+.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {
+    position: absolute;
+    z-index: 3;
+}
+
+.ace_marker-layer .ace_selection {
+    position: absolute;
+    z-index: 5;
+}
+
+.ace_marker-layer .ace_bracket {
+    position: absolute;
+    z-index: 6;
+}
+
+.ace_marker-layer .ace_error_bracket {
+    position: absolute;
+    border-bottom: 1px solid #DE5555;
+    border-radius: 0;
+}
+
+.ace_marker-layer .ace_active-line {
+    position: absolute;
+    z-index: 2;
+}
+
+.ace_marker-layer .ace_selected-word {
+    position: absolute;
+    z-index: 4;
+    box-sizing: border-box;
+}
+
+.ace_line .ace_fold {
+    box-sizing: border-box;
+
+    display: inline-block;
+    height: 11px;
+    margin-top: -2px;
+    vertical-align: middle;
+
+    background-image:
+        url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),
+        url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");
+    background-repeat: no-repeat, repeat-x;
+    background-position: center center, top left;
+    color: transparent;
+
+    border: 1px solid black;
+    border-radius: 2px;
+
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.ace_dark .ace_fold {
+}
+
+.ace_fold:hover{
+    background-image:
+        url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),
+        url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");
+}
+
+.ace_tooltip {
+    background-color: #f5f5f5;
+    border: 1px solid gray;
+    border-radius: 1px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: black;
+    max-width: 100%;
+    padding: 3px 4px;
+    position: fixed;
+    z-index: 999999;
+    box-sizing: border-box;
+    cursor: default;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: normal;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    pointer-events: none;
+    overflow: auto;
+    max-width: min(60em, 66vw);
+    overscroll-behavior: contain;
+}
+.ace_tooltip pre {
+    white-space: pre-wrap;
+}
+
+.ace_tooltip.ace_dark {
+    background-color: #636363;
+    color: #fff;
+}
+
+.ace_tooltip:focus {
+    outline: 1px solid #5E9ED6;
+}
+
+.ace_icon {
+    display: inline-block;
+    width: 18px;
+    vertical-align: top;
+}
+
+.ace_icon_svg {
+    display: inline-block;
+    width: 12px;
+    vertical-align: top;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 12px;
+    -webkit-mask-position: center;
+}
+
+.ace_folding-enabled > .ace_gutter-cell, .ace_folding-enabled > .ace_gutter-cell_svg-icons {
+    padding-right: 13px;
+}
+
+.ace_fold-widget {
+    box-sizing: border-box;
+
+    margin: 0 -12px 0 1px;
+    display: none;
+    width: 11px;
+    vertical-align: top;
+
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 3px;
+    
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.ace_folding-enabled .ace_fold-widget {
+    display: inline-block;   
+}
+
+.ace_fold-widget.ace_end {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");
+}
+
+.ace_fold-widget.ace_closed {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");
+}
+
+.ace_fold-widget:hover {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.ace_fold-widget:active {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+/**
+ * Dark version for fold widgets
+ */
+.ace_dark .ace_fold-widget {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");
+}
+.ace_dark .ace_fold-widget.ace_end {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");
+}
+.ace_dark .ace_fold-widget.ace_closed {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");
+}
+.ace_dark .ace_fold-widget:hover {
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.ace_dark .ace_fold-widget:active {
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.ace_inline_button {
+    border: 1px solid lightgray;
+    display: inline-block;
+    margin: -1px 8px;
+    padding: 0 5px;
+    pointer-events: auto;
+    cursor: pointer;
+}
+.ace_inline_button:hover {
+    border-color: gray;
+    background: rgba(200,200,200,0.2);
+    display: inline-block;
+    pointer-events: auto;
+}
+
+.ace_fold-widget.ace_invalid {
+    background-color: #FFB4B4;
+    border-color: #DE5555;
+}
+
+.ace_fade-fold-widgets .ace_fold-widget {
+    transition: opacity 0.4s ease 0.05s;
+    opacity: 0;
+}
+
+.ace_fade-fold-widgets:hover .ace_fold-widget {
+    transition: opacity 0.05s ease 0.05s;
+    opacity:1;
+}
+
+.ace_underline {
+    text-decoration: underline;
+}
+
+.ace_bold {
+    font-weight: bold;
+}
+
+.ace_nobold .ace_bold {
+    font-weight: normal;
+}
+
+.ace_italic {
+    font-style: italic;
+}
+
+
+.ace_error-marker {
+    background-color: rgba(255, 0, 0,0.2);
+    position: absolute;
+    z-index: 9;
+}
+
+.ace_highlight-marker {
+    background-color: rgba(255, 255, 0,0.2);
+    position: absolute;
+    z-index: 8;
+}
+
+.ace_mobile-menu {
+    position: absolute;
+    line-height: 1.5;
+    border-radius: 4px;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background: white;
+    box-shadow: 1px 3px 2px grey;
+    border: 1px solid #dcdcdc;
+    color: black;
+}
+.ace_dark > .ace_mobile-menu {
+    background: #333;
+    color: #ccc;
+    box-shadow: 1px 3px 2px grey;
+    border: 1px solid #444;
+
+}
+.ace_mobile-button {
+    padding: 2px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.ace_mobile-button:hover {
+    background-color: #eee;
+    opacity:1;
+}
+.ace_mobile-button:active {
+    background-color: #ddd;
+}
+
+.ace_placeholder {
+    font-family: arial;
+    transform: scale(0.9);
+    transform-origin: left;
+    white-space: pre;
+    opacity: 0.7;
+    margin: 0 10px;
+}
+
+.ace_ghost_text {
+    opacity: 0.5;
+    font-style: italic;
+    white-space: pre;
+}
+
+.ace_screenreader-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace_scrollbar.css">.ace_editor>.ace_sb-v div, .ace_editor>.ace_sb-h div{
+  position: absolute;
+  background: rgba(128, 128, 128, 0.6);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  z-index: 8;
+}
+.ace_editor>.ace_sb-v, .ace_editor>.ace_sb-h {
+  position: absolute;
+  z-index: 6;
+  background: none;
+  overflow: hidden!important;
+}
+.ace_editor>.ace_sb-v {
+  z-index: 6;
+  right: 0;
+  top: 0;
+  width: 12px;
+}
+.ace_editor>.ace_sb-v div {
+  z-index: 8;
+  right: 0;
+  width: 100%;
+}
+.ace_editor>.ace_sb-h {
+  bottom: 0;
+  left: 0;
+  height: 12px;
+}
+.ace_editor>.ace_sb-h div {
+  bottom: 0;
+  height: 100%;
+}
+.ace_editor>.ace_sb_grabbed {
+  z-index: 8;
+  background: #000;
+}
+/*# sourceURL=ace/css/ace_scrollbar.css */</style><script src="./Airbnb SQL Interview Question _ DataLemur_files/110561152082806" async=""></script><script async="" src="./Airbnb SQL Interview Question _ DataLemur_files/fbevents.js.download"></script><script type="text/javascript" async="" src="./Airbnb SQL Interview Question _ DataLemur_files/heap-3540127101.js.download"></script><script type="text/javascript" async="" src="./Airbnb SQL Interview Question _ DataLemur_files/js"></script><script async="" src="./Airbnb SQL Interview Question _ DataLemur_files/gtm.js.download"></script><script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js', });
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'&gtm_auth=&gtm_preview=&gtm_cookies_win=x';
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KZZK2KV');</script><meta name="viewport" content="width=device-width"><title>Airbnb SQL Interview Question | DataLemur</title><meta name="robots" content="index,follow"><meta name="description" content="Airbnb SQL Interview Question: Write a query to find the top marketing channel and percentage of first rental booking."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@nicksinghtech"><meta name="twitter:creator" content="@nicksinghtech"><meta property="og:title" content="Airbnb SQL Interview Question | DataLemur"><meta property="og:description" content="Airbnb SQL Interview Question: Write a query to find the top marketing channel and percentage of first rental booking."><meta property="og:url" content="https://datalemur.com/questions/booking-referral-source"><meta property="og:type" content="website"><meta property="og:image" content="https://api.datalemur.com/assets/5955a044-b6f7-48f8-9110-59fd4a93f257"><meta property="og:image:alt" content="DataLemur - Ace the SQL &amp; Data Science Interview"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><link rel="canonical" href="https://datalemur.com/questions/booking-referral-source"><meta name="twitter:image" content="https://api.datalemur.com/assets/5955a044-b6f7-48f8-9110-59fd4a93f257"><meta name="next-head-count" content="18"><link data-next-font="size-adjust" rel="preconnect" href="https://datalemur.com/" crossorigin="anonymous"><link rel="preload" href="./Airbnb SQL Interview Question _ DataLemur_files/868580e8eb50412a.css" as="style"><link rel="stylesheet" href="./Airbnb SQL Interview Question _ DataLemur_files/868580e8eb50412a.css" data-n-g=""><link rel="preload" href="./Airbnb SQL Interview Question _ DataLemur_files/0afc67735dddedc5.css" as="style"><link rel="stylesheet" href="./Airbnb SQL Interview Question _ DataLemur_files/0afc67735dddedc5.css" data-n-p=""><link rel="preload" href="./Airbnb SQL Interview Question _ DataLemur_files/ecf40682388437bf.css" as="style"><link rel="stylesheet" href="./Airbnb SQL Interview Question _ DataLemur_files/ecf40682388437bf.css" data-n-p=""><noscript data-n-css=""></noscript><script defer="" nomodule="" src="./Airbnb SQL Interview Question _ DataLemur_files/polyfills-c67a75d1b6f99dc8.js.download"></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/clerk.browser.js.download" data-clerk-js-script="true" async="" data-clerk-publishable-key="pk_live_Y2xlcmsuZGF0YWxlbXVyLmNvbSQ" data-nscript="beforeInteractive"></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/webpack-159fede09c215b24.js.download" defer=""></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/framework-c5530995ab2fee2e.js.download" defer=""></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/main-521e5349db4416a2.js.download" defer=""></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/_app-18f0d255c7254f6d.js.download" defer=""></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/175675d1-898fbd073b4cb61f.js.download" defer=""></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/29107295-b9aa17045324f4dc.js.download" defer=""></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/2390-7233a875b20aef18.js.download" defer=""></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/4806-153061a7deca27a7.js.download" defer=""></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/887-e01b809fce8fabbf.js.download" defer=""></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/[questionSlug]-83da042b7cdb8d6a.js.download" defer=""></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/_buildManifest.js.download" defer=""></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/_ssgManifest.js.download" defer=""></script><style data-emotion="css-global" data-s="">:host,:root,[data-theme]{--chakra-ring-inset:var(--chakra-empty,/*!*/ /*!*/);--chakra-ring-offset-width:0px;--chakra-ring-offset-color:#fff;--chakra-ring-color:rgba(66, 153, 225, 0.6);--chakra-ring-offset-shadow:0 0 #0000;--chakra-ring-shadow:0 0 #0000;--chakra-space-x-reverse:0;--chakra-space-y-reverse:0;--chakra-colors-transparent:transparent;--chakra-colors-current:currentColor;--chakra-colors-black:#000000;--chakra-colors-white:#FFFFFF;--chakra-colors-whiteAlpha-50:rgba(255, 255, 255, 0.04);--chakra-colors-whiteAlpha-100:rgba(255, 255, 255, 0.06);--chakra-colors-whiteAlpha-200:rgba(255, 255, 255, 0.08);--chakra-colors-whiteAlpha-300:rgba(255, 255, 255, 0.16);--chakra-colors-whiteAlpha-400:rgba(255, 255, 255, 0.24);--chakra-colors-whiteAlpha-500:rgba(255, 255, 255, 0.36);--chakra-colors-whiteAlpha-600:rgba(255, 255, 255, 0.48);--chakra-colors-whiteAlpha-700:rgba(255, 255, 255, 0.64);--chakra-colors-whiteAlpha-800:rgba(255, 255, 255, 0.80);--chakra-colors-whiteAlpha-900:rgba(255, 255, 255, 0.92);--chakra-colors-blackAlpha-50:rgba(0, 0, 0, 0.04);--chakra-colors-blackAlpha-100:rgba(0, 0, 0, 0.06);--chakra-colors-blackAlpha-200:rgba(0, 0, 0, 0.08);--chakra-colors-blackAlpha-300:rgba(0, 0, 0, 0.16);--chakra-colors-blackAlpha-400:rgba(0, 0, 0, 0.24);--chakra-colors-blackAlpha-500:rgba(0, 0, 0, 0.36);--chakra-colors-blackAlpha-600:rgba(0, 0, 0, 0.48);--chakra-colors-blackAlpha-700:rgba(0, 0, 0, 0.64);--chakra-colors-blackAlpha-800:rgba(0, 0, 0, 0.80);--chakra-colors-blackAlpha-900:rgba(0, 0, 0, 0.92);--chakra-colors-gray-50:#F7FAFC;--chakra-colors-gray-100:#EDF2F7;--chakra-colors-gray-200:#E2E8F0;--chakra-colors-gray-300:#CBD5E0;--chakra-colors-gray-400:#A0AEC0;--chakra-colors-gray-500:#718096;--chakra-colors-gray-600:#4A5568;--chakra-colors-gray-700:#2D3748;--chakra-colors-gray-800:#1A202C;--chakra-colors-gray-900:#171923;--chakra-colors-red-50:#FFF5F5;--chakra-colors-red-100:#FED7D7;--chakra-colors-red-200:#FEB2B2;--chakra-colors-red-300:#FC8181;--chakra-colors-red-400:#F56565;--chakra-colors-red-500:#E53E3E;--chakra-colors-red-600:#C53030;--chakra-colors-red-700:#9B2C2C;--chakra-colors-red-800:#822727;--chakra-colors-red-900:#63171B;--chakra-colors-orange-50:#FFFAF0;--chakra-colors-orange-100:#FEEBC8;--chakra-colors-orange-200:#FBD38D;--chakra-colors-orange-300:#F6AD55;--chakra-colors-orange-400:#ED8936;--chakra-colors-orange-500:#DD6B20;--chakra-colors-orange-600:#C05621;--chakra-colors-orange-700:#9C4221;--chakra-colors-orange-800:#7B341E;--chakra-colors-orange-900:#652B19;--chakra-colors-yellow-50:#FFFFF0;--chakra-colors-yellow-100:#FEFCBF;--chakra-colors-yellow-200:#FAF089;--chakra-colors-yellow-300:#F6E05E;--chakra-colors-yellow-400:#ECC94B;--chakra-colors-yellow-500:#D69E2E;--chakra-colors-yellow-600:#B7791F;--chakra-colors-yellow-700:#975A16;--chakra-colors-yellow-800:#744210;--chakra-colors-yellow-900:#5F370E;--chakra-colors-green-50:#F0FFF4;--chakra-colors-green-100:#C6F6D5;--chakra-colors-green-200:#9AE6B4;--chakra-colors-green-300:#68D391;--chakra-colors-green-400:#48BB78;--chakra-colors-green-500:#38A169;--chakra-colors-green-600:#2F855A;--chakra-colors-green-700:#276749;--chakra-colors-green-800:#22543D;--chakra-colors-green-900:#1C4532;--chakra-colors-teal-50:#E6FFFA;--chakra-colors-teal-100:#B2F5EA;--chakra-colors-teal-200:#81E6D9;--chakra-colors-teal-300:#4FD1C5;--chakra-colors-teal-400:#38B2AC;--chakra-colors-teal-500:#319795;--chakra-colors-teal-600:#2C7A7B;--chakra-colors-teal-700:#285E61;--chakra-colors-teal-800:#234E52;--chakra-colors-teal-900:#1D4044;--chakra-colors-blue-50:#ebf8ff;--chakra-colors-blue-100:#bee3f8;--chakra-colors-blue-200:#90cdf4;--chakra-colors-blue-300:#63b3ed;--chakra-colors-blue-400:#4299e1;--chakra-colors-blue-500:#3182ce;--chakra-colors-blue-600:#2b6cb0;--chakra-colors-blue-700:#2c5282;--chakra-colors-blue-800:#2a4365;--chakra-colors-blue-900:#1A365D;--chakra-colors-cyan-50:#EDFDFD;--chakra-colors-cyan-100:#C4F1F9;--chakra-colors-cyan-200:#9DECF9;--chakra-colors-cyan-300:#76E4F7;--chakra-colors-cyan-400:#0BC5EA;--chakra-colors-cyan-500:#00B5D8;--chakra-colors-cyan-600:#00A3C4;--chakra-colors-cyan-700:#0987A0;--chakra-colors-cyan-800:#086F83;--chakra-colors-cyan-900:#065666;--chakra-colors-purple-50:#FAF5FF;--chakra-colors-purple-100:#E9D8FD;--chakra-colors-purple-200:#D6BCFA;--chakra-colors-purple-300:#B794F4;--chakra-colors-purple-400:#9F7AEA;--chakra-colors-purple-500:#805AD5;--chakra-colors-purple-600:#6B46C1;--chakra-colors-purple-700:#553C9A;--chakra-colors-purple-800:#44337A;--chakra-colors-purple-900:#322659;--chakra-colors-pink-50:#FFF5F7;--chakra-colors-pink-100:#FED7E2;--chakra-colors-pink-200:#FBB6CE;--chakra-colors-pink-300:#F687B3;--chakra-colors-pink-400:#ED64A6;--chakra-colors-pink-500:#D53F8C;--chakra-colors-pink-600:#B83280;--chakra-colors-pink-700:#97266D;--chakra-colors-pink-800:#702459;--chakra-colors-pink-900:#521B41;--chakra-colors-linkedin-50:#E8F4F9;--chakra-colors-linkedin-100:#CFEDFB;--chakra-colors-linkedin-200:#9BDAF3;--chakra-colors-linkedin-300:#68C7EC;--chakra-colors-linkedin-400:#34B3E4;--chakra-colors-linkedin-500:#00A0DC;--chakra-colors-linkedin-600:#008CC9;--chakra-colors-linkedin-700:#0077B5;--chakra-colors-linkedin-800:#005E93;--chakra-colors-linkedin-900:#004471;--chakra-colors-facebook-50:#E8F4F9;--chakra-colors-facebook-100:#D9DEE9;--chakra-colors-facebook-200:#B7C2DA;--chakra-colors-facebook-300:#6482C0;--chakra-colors-facebook-400:#4267B2;--chakra-colors-facebook-500:#385898;--chakra-colors-facebook-600:#314E89;--chakra-colors-facebook-700:#29487D;--chakra-colors-facebook-800:#223B67;--chakra-colors-facebook-900:#1E355B;--chakra-colors-messenger-50:#D0E6FF;--chakra-colors-messenger-100:#B9DAFF;--chakra-colors-messenger-200:#A2CDFF;--chakra-colors-messenger-300:#7AB8FF;--chakra-colors-messenger-400:#2E90FF;--chakra-colors-messenger-500:#0078FF;--chakra-colors-messenger-600:#0063D1;--chakra-colors-messenger-700:#0052AC;--chakra-colors-messenger-800:#003C7E;--chakra-colors-messenger-900:#002C5C;--chakra-colors-whatsapp-50:#dffeec;--chakra-colors-whatsapp-100:#b9f5d0;--chakra-colors-whatsapp-200:#90edb3;--chakra-colors-whatsapp-300:#65e495;--chakra-colors-whatsapp-400:#3cdd78;--chakra-colors-whatsapp-500:#22c35e;--chakra-colors-whatsapp-600:#179848;--chakra-colors-whatsapp-700:#0c6c33;--chakra-colors-whatsapp-800:#01421c;--chakra-colors-whatsapp-900:#001803;--chakra-colors-twitter-50:#E5F4FD;--chakra-colors-twitter-100:#C8E9FB;--chakra-colors-twitter-200:#A8DCFA;--chakra-colors-twitter-300:#83CDF7;--chakra-colors-twitter-400:#57BBF5;--chakra-colors-twitter-500:#1DA1F2;--chakra-colors-twitter-600:#1A94DA;--chakra-colors-twitter-700:#1681BF;--chakra-colors-twitter-800:#136B9E;--chakra-colors-twitter-900:#0D4D71;--chakra-colors-telegram-50:#E3F2F9;--chakra-colors-telegram-100:#C5E4F3;--chakra-colors-telegram-200:#A2D4EC;--chakra-colors-telegram-300:#7AC1E4;--chakra-colors-telegram-400:#47A9DA;--chakra-colors-telegram-500:#0088CC;--chakra-colors-telegram-600:#007AB8;--chakra-colors-telegram-700:#006BA1;--chakra-colors-telegram-800:#005885;--chakra-colors-telegram-900:#003F5E;--chakra-borders-none:0;--chakra-borders-1px:1px solid;--chakra-borders-2px:2px solid;--chakra-borders-4px:4px solid;--chakra-borders-8px:8px solid;--chakra-fonts-heading:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--chakra-fonts-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--chakra-fonts-mono:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--chakra-fontSizes-3xs:0.45rem;--chakra-fontSizes-2xs:0.625rem;--chakra-fontSizes-xs:0.75rem;--chakra-fontSizes-sm:0.875rem;--chakra-fontSizes-md:1rem;--chakra-fontSizes-lg:1.125rem;--chakra-fontSizes-xl:1.25rem;--chakra-fontSizes-2xl:1.5rem;--chakra-fontSizes-3xl:1.875rem;--chakra-fontSizes-4xl:2.25rem;--chakra-fontSizes-5xl:3rem;--chakra-fontSizes-6xl:3.75rem;--chakra-fontSizes-7xl:4.5rem;--chakra-fontSizes-8xl:6rem;--chakra-fontSizes-9xl:8rem;--chakra-fontWeights-hairline:100;--chakra-fontWeights-thin:200;--chakra-fontWeights-light:300;--chakra-fontWeights-normal:400;--chakra-fontWeights-medium:500;--chakra-fontWeights-semibold:600;--chakra-fontWeights-bold:700;--chakra-fontWeights-extrabold:800;--chakra-fontWeights-black:900;--chakra-letterSpacings-tighter:-0.05em;--chakra-letterSpacings-tight:-0.025em;--chakra-letterSpacings-normal:0;--chakra-letterSpacings-wide:0.025em;--chakra-letterSpacings-wider:0.05em;--chakra-letterSpacings-widest:0.1em;--chakra-lineHeights-3:.75rem;--chakra-lineHeights-4:1rem;--chakra-lineHeights-5:1.25rem;--chakra-lineHeights-6:1.5rem;--chakra-lineHeights-7:1.75rem;--chakra-lineHeights-8:2rem;--chakra-lineHeights-9:2.25rem;--chakra-lineHeights-10:2.5rem;--chakra-lineHeights-normal:normal;--chakra-lineHeights-none:1;--chakra-lineHeights-shorter:1.25;--chakra-lineHeights-short:1.375;--chakra-lineHeights-base:1.5;--chakra-lineHeights-tall:1.625;--chakra-lineHeights-taller:2;--chakra-radii-none:0;--chakra-radii-sm:0.125rem;--chakra-radii-base:0.25rem;--chakra-radii-md:0.375rem;--chakra-radii-lg:0.5rem;--chakra-radii-xl:0.75rem;--chakra-radii-2xl:1rem;--chakra-radii-3xl:1.5rem;--chakra-radii-full:9999px;--chakra-space-1:0.25rem;--chakra-space-2:0.5rem;--chakra-space-3:0.75rem;--chakra-space-4:1rem;--chakra-space-5:1.25rem;--chakra-space-6:1.5rem;--chakra-space-7:1.75rem;--chakra-space-8:2rem;--chakra-space-9:2.25rem;--chakra-space-10:2.5rem;--chakra-space-12:3rem;--chakra-space-14:3.5rem;--chakra-space-16:4rem;--chakra-space-20:5rem;--chakra-space-24:6rem;--chakra-space-28:7rem;--chakra-space-32:8rem;--chakra-space-36:9rem;--chakra-space-40:10rem;--chakra-space-44:11rem;--chakra-space-48:12rem;--chakra-space-52:13rem;--chakra-space-56:14rem;--chakra-space-60:15rem;--chakra-space-64:16rem;--chakra-space-72:18rem;--chakra-space-80:20rem;--chakra-space-96:24rem;--chakra-space-px:1px;--chakra-space-0-5:0.125rem;--chakra-space-1-5:0.375rem;--chakra-space-2-5:0.625rem;--chakra-space-3-5:0.875rem;--chakra-shadows-xs:0 0 0 1px rgba(0, 0, 0, 0.05);--chakra-shadows-sm:0 1px 2px 0 rgba(0, 0, 0, 0.05);--chakra-shadows-base:0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);--chakra-shadows-md:0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);--chakra-shadows-lg:0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);--chakra-shadows-xl:0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);--chakra-shadows-2xl:0 25px 50px -12px rgba(0, 0, 0, 0.25);--chakra-shadows-outline:0 0 0 3px rgba(66, 153, 225, 0.6);--chakra-shadows-inner:inset 0 2px 4px 0 rgba(0,0,0,0.06);--chakra-shadows-none:none;--chakra-shadows-dark-lg:rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;--chakra-sizes-1:0.25rem;--chakra-sizes-2:0.5rem;--chakra-sizes-3:0.75rem;--chakra-sizes-4:1rem;--chakra-sizes-5:1.25rem;--chakra-sizes-6:1.5rem;--chakra-sizes-7:1.75rem;--chakra-sizes-8:2rem;--chakra-sizes-9:2.25rem;--chakra-sizes-10:2.5rem;--chakra-sizes-12:3rem;--chakra-sizes-14:3.5rem;--chakra-sizes-16:4rem;--chakra-sizes-20:5rem;--chakra-sizes-24:6rem;--chakra-sizes-28:7rem;--chakra-sizes-32:8rem;--chakra-sizes-36:9rem;--chakra-sizes-40:10rem;--chakra-sizes-44:11rem;--chakra-sizes-48:12rem;--chakra-sizes-52:13rem;--chakra-sizes-56:14rem;--chakra-sizes-60:15rem;--chakra-sizes-64:16rem;--chakra-sizes-72:18rem;--chakra-sizes-80:20rem;--chakra-sizes-96:24rem;--chakra-sizes-px:1px;--chakra-sizes-0-5:0.125rem;--chakra-sizes-1-5:0.375rem;--chakra-sizes-2-5:0.625rem;--chakra-sizes-3-5:0.875rem;--chakra-sizes-max:max-content;--chakra-sizes-min:min-content;--chakra-sizes-full:100%;--chakra-sizes-3xs:14rem;--chakra-sizes-2xs:16rem;--chakra-sizes-xs:20rem;--chakra-sizes-sm:24rem;--chakra-sizes-md:28rem;--chakra-sizes-lg:32rem;--chakra-sizes-xl:36rem;--chakra-sizes-2xl:42rem;--chakra-sizes-3xl:48rem;--chakra-sizes-4xl:56rem;--chakra-sizes-5xl:64rem;--chakra-sizes-6xl:72rem;--chakra-sizes-7xl:80rem;--chakra-sizes-8xl:90rem;--chakra-sizes-prose:60ch;--chakra-sizes-container-sm:640px;--chakra-sizes-container-md:768px;--chakra-sizes-container-lg:1024px;--chakra-sizes-container-xl:1280px;--chakra-zIndices-hide:-1;--chakra-zIndices-auto:auto;--chakra-zIndices-base:0;--chakra-zIndices-docked:10;--chakra-zIndices-dropdown:1000;--chakra-zIndices-sticky:1100;--chakra-zIndices-banner:1200;--chakra-zIndices-overlay:1300;--chakra-zIndices-modal:1400;--chakra-zIndices-popover:1500;--chakra-zIndices-skipLink:1600;--chakra-zIndices-toast:1700;--chakra-zIndices-tooltip:1800;--chakra-transition-property-common:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;--chakra-transition-property-colors:background-color,border-color,color,fill,stroke;--chakra-transition-property-dimensions:width,height;--chakra-transition-property-position:left,right,top,bottom;--chakra-transition-property-background:background-color,background-image,background-position;--chakra-transition-easing-ease-in:cubic-bezier(0.4, 0, 1, 1);--chakra-transition-easing-ease-out:cubic-bezier(0, 0, 0.2, 1);--chakra-transition-easing-ease-in-out:cubic-bezier(0.4, 0, 0.2, 1);--chakra-transition-duration-ultra-fast:50ms;--chakra-transition-duration-faster:100ms;--chakra-transition-duration-fast:150ms;--chakra-transition-duration-normal:200ms;--chakra-transition-duration-slow:300ms;--chakra-transition-duration-slower:400ms;--chakra-transition-duration-ultra-slow:500ms;--chakra-blur-none:0;--chakra-blur-sm:4px;--chakra-blur-base:8px;--chakra-blur-md:12px;--chakra-blur-lg:16px;--chakra-blur-xl:24px;--chakra-blur-2xl:40px;--chakra-blur-3xl:64px;--chakra-breakpoints-base:0em;--chakra-breakpoints-sm:30em;--chakra-breakpoints-md:48em;--chakra-breakpoints-lg:62em;--chakra-breakpoints-xl:80em;--chakra-breakpoints-2xl:96em;}.chakra-ui-light :host:not([data-theme]),.chakra-ui-light :root:not([data-theme]),.chakra-ui-light [data-theme]:not([data-theme]),[data-theme=light] :host:not([data-theme]),[data-theme=light] :root:not([data-theme]),[data-theme=light] [data-theme]:not([data-theme]),:host[data-theme=light],:root[data-theme=light],[data-theme][data-theme=light]{--chakra-colors-chakra-body-text:var(--chakra-colors-gray-800);--chakra-colors-chakra-body-bg:var(--chakra-colors-white);--chakra-colors-chakra-border-color:var(--chakra-colors-gray-200);--chakra-colors-chakra-inverse-text:var(--chakra-colors-white);--chakra-colors-chakra-subtle-bg:var(--chakra-colors-gray-100);--chakra-colors-chakra-subtle-text:var(--chakra-colors-gray-600);--chakra-colors-chakra-placeholder-color:var(--chakra-colors-gray-500);}.chakra-ui-dark :host:not([data-theme]),.chakra-ui-dark :root:not([data-theme]),.chakra-ui-dark [data-theme]:not([data-theme]),[data-theme=dark] :host:not([data-theme]),[data-theme=dark] :root:not([data-theme]),[data-theme=dark] [data-theme]:not([data-theme]),:host[data-theme=dark],:root[data-theme=dark],[data-theme][data-theme=dark]{--chakra-colors-chakra-body-text:var(--chakra-colors-whiteAlpha-900);--chakra-colors-chakra-body-bg:var(--chakra-colors-gray-800);--chakra-colors-chakra-border-color:var(--chakra-colors-whiteAlpha-300);--chakra-colors-chakra-inverse-text:var(--chakra-colors-gray-800);--chakra-colors-chakra-subtle-bg:var(--chakra-colors-gray-700);--chakra-colors-chakra-subtle-text:var(--chakra-colors-gray-400);--chakra-colors-chakra-placeholder-color:var(--chakra-colors-whiteAlpha-400);}</style><style data-emotion="css-global" data-s="">html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;touch-action:manipulation;}body{position:relative;min-height:100%;margin:0;font-feature-settings:"kern";}:where(*, *::before, *::after){border-width:0;border-style:solid;box-sizing:border-box;word-wrap:break-word;}main{display:block;}hr{border-top-width:1px;box-sizing:content-box;height:0;overflow:visible;}:where(pre, code, kbd,samp){font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:1em;}a{background-color:transparent;color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit;}abbr[title]{border-bottom:none;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration:underline dotted;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;}:where(b, strong){font-weight:bold;}small{font-size:80%;}:where(sub,sup){font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sub{bottom:-0.25em;}sup{top:-0.5em;}img{border-style:none;}:where(button, input, optgroup, select, textarea){font-family:inherit;font-size:100%;line-height:1.15;margin:0;}:where(button, input){overflow:visible;}:where(button, select){text-transform:none;}:where(
+          button::-moz-focus-inner,
+          [type="button"]::-moz-focus-inner,
+          [type="reset"]::-moz-focus-inner,
+          [type="submit"]::-moz-focus-inner
+        ){border-style:none;padding:0;}fieldset{padding:0.35em 0.75em 0.625em;}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}progress{vertical-align:baseline;}textarea{overflow:auto;}:where([type="checkbox"], [type="radio"]){box-sizing:border-box;padding:0;}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none!important;}input[type="number"]{-moz-appearance:textfield;}input[type="search"]{-webkit-appearance:textfield;outline-offset:-2px;}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none!important;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}details{display:block;}summary{display:-webkit-box;display:-webkit-list-item;display:-ms-list-itembox;display:list-item;}template{display:none;}[hidden]{display:none!important;}:where(
+          blockquote,
+          dl,
+          dd,
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          hr,
+          figure,
+          p,
+          pre
+        ){margin:0;}button{background:transparent;padding:0;}fieldset{margin:0;padding:0;}:where(ol, ul){margin:0;padding:0;}textarea{resize:vertical;}:where(button, [role="button"]){cursor:pointer;}button::-moz-focus-inner{border:0!important;}table{border-collapse:collapse;}:where(h1, h2, h3, h4, h5, h6){font-size:inherit;font-weight:inherit;}:where(button, input, optgroup, select, textarea){padding:0;line-height:inherit;color:inherit;}:where(img, svg, video, canvas, audio, iframe, embed, object){display:block;}:where(img, video){max-width:100%;height:auto;}[data-js-focus-visible] :focus:not([data-focus-visible-added]):not(
+          [data-focus-visible-disabled]
+        ){outline:none;box-shadow:none;}select::-ms-expand{display:none;}:root,:host{--chakra-vh:100vh;}@supports (height: -webkit-fill-available){:root,:host{--chakra-vh:-webkit-fill-available;}}@supports (height: -moz-fill-available){:root,:host{--chakra-vh:-moz-fill-available;}}@supports (height: 100dvh){:root,:host{--chakra-vh:100dvh;}}</style><style data-emotion="css-global" data-s="">body{font-family:var(--chakra-fonts-body);color:var(--chakra-colors-chakra-body-text);background:var(--chakra-colors-chakra-body-bg);transition-property:background-color;transition-duration:var(--chakra-transition-duration-normal);line-height:var(--chakra-lineHeights-base);}*::-webkit-input-placeholder{color:var(--chakra-colors-chakra-placeholder-color);}*::-moz-placeholder{color:var(--chakra-colors-chakra-placeholder-color);}*:-ms-input-placeholder{color:var(--chakra-colors-chakra-placeholder-color);}*::placeholder{color:var(--chakra-colors-chakra-placeholder-color);}*,*::before,::after{border-color:var(--chakra-colors-chakra-border-color);}</style><style data-emotion="css-global" data-s="">:host,:root,[data-theme]{--chakra-ring-inset:var(--chakra-empty,/*!*/ /*!*/);--chakra-ring-offset-width:0px;--chakra-ring-offset-color:#fff;--chakra-ring-color:rgba(66, 153, 225, 0.6);--chakra-ring-offset-shadow:0 0 #0000;--chakra-ring-shadow:0 0 #0000;--chakra-space-x-reverse:0;--chakra-space-y-reverse:0;--chakra-colors-transparent:transparent;--chakra-colors-current:currentColor;--chakra-colors-black-200:#4D4D4D;--chakra-colors-black-300:#666666;--chakra-colors-black-500:#0A0A0A;--chakra-colors-white:#FFFFFF;--chakra-colors-whiteAlpha-50:rgba(255, 255, 255, 0.04);--chakra-colors-whiteAlpha-100:rgba(255, 255, 255, 0.06);--chakra-colors-whiteAlpha-200:rgba(255, 255, 255, 0.08);--chakra-colors-whiteAlpha-300:rgba(255, 255, 255, 0.16);--chakra-colors-whiteAlpha-400:rgba(255, 255, 255, 0.24);--chakra-colors-whiteAlpha-500:rgba(255, 255, 255, 0.36);--chakra-colors-whiteAlpha-600:rgba(255, 255, 255, 0.48);--chakra-colors-whiteAlpha-700:rgba(255, 255, 255, 0.64);--chakra-colors-whiteAlpha-800:rgba(255, 255, 255, 0.80);--chakra-colors-whiteAlpha-900:rgba(255, 255, 255, 0.92);--chakra-colors-blackAlpha-50:rgba(0, 0, 0, 0.04);--chakra-colors-blackAlpha-100:rgba(0, 0, 0, 0.06);--chakra-colors-blackAlpha-200:rgba(0, 0, 0, 0.08);--chakra-colors-blackAlpha-300:rgba(0, 0, 0, 0.16);--chakra-colors-blackAlpha-400:rgba(0, 0, 0, 0.24);--chakra-colors-blackAlpha-500:rgba(0, 0, 0, 0.36);--chakra-colors-blackAlpha-600:rgba(0, 0, 0, 0.48);--chakra-colors-blackAlpha-700:rgba(0, 0, 0, 0.64);--chakra-colors-blackAlpha-800:rgba(0, 0, 0, 0.80);--chakra-colors-blackAlpha-900:rgba(0, 0, 0, 0.92);--chakra-colors-gray-50:#F7FAFC;--chakra-colors-gray-100:#FCFCFC;--chakra-colors-gray-200:#F0F0F0;--chakra-colors-gray-300:#E5E5E5;--chakra-colors-gray-400:#DADADA;--chakra-colors-gray-500:#CCCCCC;--chakra-colors-gray-600:#4A5568;--chakra-colors-gray-700:#2D3748;--chakra-colors-gray-800:#1A202C;--chakra-colors-gray-900:#171923;--chakra-colors-red-50:#FFF5F5;--chakra-colors-red-100:#F8CBC5;--chakra-colors-red-200:#DC3B26;--chakra-colors-red-300:#A12B1B;--chakra-colors-red-400:#CB171E;--chakra-colors-red-500:#ED1C24;--chakra-colors-red-600:#ED1C24;--chakra-colors-red-700:#ED1C24;--chakra-colors-red-800:#ED1C24;--chakra-colors-red-850:#8E271A;--chakra-colors-red-900:#74170B;--chakra-colors-orange-50:#FFFAF0;--chakra-colors-orange-100:#FAE0B4;--chakra-colors-orange-200:#D98506;--chakra-colors-orange-300:#915103;--chakra-colors-orange-400:#663800;--chakra-colors-orange-500:#DD6B20;--chakra-colors-orange-600:#C05621;--chakra-colors-orange-700:#9C4221;--chakra-colors-orange-800:#7B341E;--chakra-colors-orange-900:#652B19;--chakra-colors-yellow-50:#FFFFF0;--chakra-colors-yellow-100:#FEFCBF;--chakra-colors-yellow-200:#FAF089;--chakra-colors-yellow-300:#F6E05E;--chakra-colors-yellow-400:#ECC94B;--chakra-colors-yellow-500:#D69E2E;--chakra-colors-yellow-600:#B7791F;--chakra-colors-yellow-700:#975A16;--chakra-colors-yellow-800:#744210;--chakra-colors-yellow-900:#5F370E;--chakra-colors-green-50:#F0FFF4;--chakra-colors-green-100:#BBEBCD;--chakra-colors-green-200:#16A34A;--chakra-colors-green-300:#17723A;--chakra-colors-green-400:#104B27;--chakra-colors-green-500:#38A169;--chakra-colors-green-600:#2F855A;--chakra-colors-green-700:#276749;--chakra-colors-green-800:#22543D;--chakra-colors-green-900:#1C4532;--chakra-colors-teal-50:#E6FFFA;--chakra-colors-teal-100:#B2F5EA;--chakra-colors-teal-200:#81E6D9;--chakra-colors-teal-300:#4FD1C5;--chakra-colors-teal-400:#38B2AC;--chakra-colors-teal-500:#319795;--chakra-colors-teal-600:#2C7A7B;--chakra-colors-teal-700:#285E61;--chakra-colors-teal-800:#234E52;--chakra-colors-teal-900:#1D4044;--chakra-colors-blue-50:#ebf8ff;--chakra-colors-blue-100:#DAEAF3;--chakra-colors-blue-200:#3182CE;--chakra-colors-blue-250:#1983C4;--chakra-colors-blue-300:#63b3ed;--chakra-colors-blue-400:#4299e1;--chakra-colors-blue-500:#3182ce;--chakra-colors-blue-600:#2b6cb0;--chakra-colors-blue-700:#2c5282;--chakra-colors-blue-800:#2a4365;--chakra-colors-blue-900:#1A365D;--chakra-colors-cyan-50:#EDFDFD;--chakra-colors-cyan-100:#C4F1F9;--chakra-colors-cyan-200:#9DECF9;--chakra-colors-cyan-300:#76E4F7;--chakra-colors-cyan-400:#0BC5EA;--chakra-colors-cyan-500:#00B5D8;--chakra-colors-cyan-600:#00A3C4;--chakra-colors-cyan-700:#0987A0;--chakra-colors-cyan-800:#086F83;--chakra-colors-cyan-900:#065666;--chakra-colors-purple-50:#FAF5FF;--chakra-colors-purple-100:#E9D8FD;--chakra-colors-purple-200:#D6BCFA;--chakra-colors-purple-300:#B794F4;--chakra-colors-purple-400:#9F7AEA;--chakra-colors-purple-500:#805AD5;--chakra-colors-purple-600:#6B46C1;--chakra-colors-purple-700:#553C9A;--chakra-colors-purple-800:#44337A;--chakra-colors-purple-900:#322659;--chakra-colors-pink-50:#FFF5F7;--chakra-colors-pink-100:#FED7E2;--chakra-colors-pink-200:#F9CFD1;--chakra-colors-pink-300:#F687B3;--chakra-colors-pink-400:#ED64A6;--chakra-colors-pink-500:#D53F8C;--chakra-colors-pink-600:#B83280;--chakra-colors-pink-700:#97266D;--chakra-colors-pink-800:#702459;--chakra-colors-pink-900:#521B41;--chakra-colors-linkedin-50:#E8F4F9;--chakra-colors-linkedin-100:#CFEDFB;--chakra-colors-linkedin-200:#9BDAF3;--chakra-colors-linkedin-300:#68C7EC;--chakra-colors-linkedin-400:#34B3E4;--chakra-colors-linkedin-500:#00A0DC;--chakra-colors-linkedin-600:#008CC9;--chakra-colors-linkedin-700:#0077B5;--chakra-colors-linkedin-800:#005E93;--chakra-colors-linkedin-900:#004471;--chakra-colors-facebook-50:#E8F4F9;--chakra-colors-facebook-100:#D9DEE9;--chakra-colors-facebook-200:#B7C2DA;--chakra-colors-facebook-300:#6482C0;--chakra-colors-facebook-400:#4267B2;--chakra-colors-facebook-500:#385898;--chakra-colors-facebook-600:#314E89;--chakra-colors-facebook-700:#29487D;--chakra-colors-facebook-800:#223B67;--chakra-colors-facebook-900:#1E355B;--chakra-colors-messenger-50:#D0E6FF;--chakra-colors-messenger-100:#B9DAFF;--chakra-colors-messenger-200:#A2CDFF;--chakra-colors-messenger-300:#7AB8FF;--chakra-colors-messenger-400:#2E90FF;--chakra-colors-messenger-500:#0078FF;--chakra-colors-messenger-600:#0063D1;--chakra-colors-messenger-700:#0052AC;--chakra-colors-messenger-800:#003C7E;--chakra-colors-messenger-900:#002C5C;--chakra-colors-whatsapp-50:#dffeec;--chakra-colors-whatsapp-100:#b9f5d0;--chakra-colors-whatsapp-200:#90edb3;--chakra-colors-whatsapp-300:#65e495;--chakra-colors-whatsapp-400:#3cdd78;--chakra-colors-whatsapp-500:#22c35e;--chakra-colors-whatsapp-600:#179848;--chakra-colors-whatsapp-700:#0c6c33;--chakra-colors-whatsapp-800:#01421c;--chakra-colors-whatsapp-900:#001803;--chakra-colors-twitter-50:#E5F4FD;--chakra-colors-twitter-100:#C8E9FB;--chakra-colors-twitter-200:#A8DCFA;--chakra-colors-twitter-300:#83CDF7;--chakra-colors-twitter-400:#57BBF5;--chakra-colors-twitter-500:#1DA1F2;--chakra-colors-twitter-600:#1A94DA;--chakra-colors-twitter-700:#1681BF;--chakra-colors-twitter-800:#136B9E;--chakra-colors-twitter-900:#0D4D71;--chakra-colors-telegram-50:#E3F2F9;--chakra-colors-telegram-100:#C5E4F3;--chakra-colors-telegram-200:#A2D4EC;--chakra-colors-telegram-300:#7AC1E4;--chakra-colors-telegram-400:#47A9DA;--chakra-colors-telegram-500:#0088CC;--chakra-colors-telegram-600:#007AB8;--chakra-colors-telegram-700:#006BA1;--chakra-colors-telegram-800:#005885;--chakra-colors-telegram-900:#003F5E;--chakra-colors-linkedInBlue:#0A66C2;--chakra-colors-facebookBlue:#1778F2;--chakra-colors-tableOddRows-100:#F5F5F5;--chakra-borders-none:0;--chakra-borders-1px:1px solid;--chakra-borders-2px:2px solid;--chakra-borders-4px:4px solid;--chakra-borders-8px:8px solid;--chakra-fonts-heading:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--chakra-fonts-body:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--chakra-fonts-mono:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--chakra-fonts-KumbhSans:"Kumbh Sans",sans-serif;--chakra-fonts-spaceMono:'__Space_Mono_3e9826','__Space_Mono_Fallback_3e9826';--chakra-fontSizes-3xs:0.45rem;--chakra-fontSizes-2xs:0.625rem;--chakra-fontSizes-xs:0.75rem;--chakra-fontSizes-sm:0.875rem;--chakra-fontSizes-md:1rem;--chakra-fontSizes-lg:1.125rem;--chakra-fontSizes-xl:1.25rem;--chakra-fontSizes-2xl:1.5rem;--chakra-fontSizes-3xl:1.875rem;--chakra-fontSizes-4xl:2.25rem;--chakra-fontSizes-5xl:3rem;--chakra-fontSizes-6xl:3.75rem;--chakra-fontSizes-7xl:4.5rem;--chakra-fontSizes-8xl:6rem;--chakra-fontSizes-9xl:8rem;--chakra-fontWeights-hairline:100;--chakra-fontWeights-thin:200;--chakra-fontWeights-light:300;--chakra-fontWeights-normal:400;--chakra-fontWeights-medium:500;--chakra-fontWeights-semibold:600;--chakra-fontWeights-bold:700;--chakra-fontWeights-extrabold:800;--chakra-fontWeights-black:900;--chakra-letterSpacings-tighter:-0.05em;--chakra-letterSpacings-tight:-0.025em;--chakra-letterSpacings-normal:0;--chakra-letterSpacings-wide:0.025em;--chakra-letterSpacings-wider:0.05em;--chakra-letterSpacings-widest:0.1em;--chakra-lineHeights-3:.75rem;--chakra-lineHeights-4:1rem;--chakra-lineHeights-5:1.25rem;--chakra-lineHeights-6:1.5rem;--chakra-lineHeights-7:1.75rem;--chakra-lineHeights-8:2rem;--chakra-lineHeights-9:2.25rem;--chakra-lineHeights-10:2.5rem;--chakra-lineHeights-normal:normal;--chakra-lineHeights-none:1;--chakra-lineHeights-shorter:1.25;--chakra-lineHeights-short:1.375;--chakra-lineHeights-base:1.5;--chakra-lineHeights-tall:1.625;--chakra-lineHeights-taller:2;--chakra-radii-none:0;--chakra-radii-sm:0.125rem;--chakra-radii-base:0.25rem;--chakra-radii-md:0.375rem;--chakra-radii-lg:0.5rem;--chakra-radii-xl:0.75rem;--chakra-radii-2xl:1rem;--chakra-radii-3xl:1.5rem;--chakra-radii-full:9999px;--chakra-space-1:0.25rem;--chakra-space-2:0.5rem;--chakra-space-3:0.75rem;--chakra-space-4:1rem;--chakra-space-5:1.25rem;--chakra-space-6:1.5rem;--chakra-space-7:1.75rem;--chakra-space-8:2rem;--chakra-space-9:2.25rem;--chakra-space-10:2.5rem;--chakra-space-12:3rem;--chakra-space-14:3.5rem;--chakra-space-16:4rem;--chakra-space-20:5rem;--chakra-space-24:6rem;--chakra-space-28:7rem;--chakra-space-32:8rem;--chakra-space-36:9rem;--chakra-space-40:10rem;--chakra-space-44:11rem;--chakra-space-48:12rem;--chakra-space-52:13rem;--chakra-space-56:14rem;--chakra-space-60:15rem;--chakra-space-64:16rem;--chakra-space-72:18rem;--chakra-space-80:20rem;--chakra-space-96:24rem;--chakra-space-px:1px;--chakra-space-0-5:0.125rem;--chakra-space-1-5:0.375rem;--chakra-space-2-5:0.625rem;--chakra-space-3-5:0.875rem;--chakra-shadows-xs:0 0 0 1px rgba(0, 0, 0, 0.05);--chakra-shadows-sm:0 1px 2px 0 rgba(0, 0, 0, 0.05);--chakra-shadows-base:0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);--chakra-shadows-md:0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);--chakra-shadows-lg:0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);--chakra-shadows-xl:0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);--chakra-shadows-2xl:0 25px 50px -12px rgba(0, 0, 0, 0.25);--chakra-shadows-outline:0 0 0 3px rgba(66, 153, 225, 0.6);--chakra-shadows-inner:inset 0 2px 4px 0 rgba(0,0,0,0.06);--chakra-shadows-none:none;--chakra-shadows-dark-lg:rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;--chakra-sizes-1:0.25rem;--chakra-sizes-2:0.5rem;--chakra-sizes-3:0.75rem;--chakra-sizes-4:1rem;--chakra-sizes-5:1.25rem;--chakra-sizes-6:1.5rem;--chakra-sizes-7:1.75rem;--chakra-sizes-8:2rem;--chakra-sizes-9:2.25rem;--chakra-sizes-10:2.5rem;--chakra-sizes-12:3rem;--chakra-sizes-14:3.5rem;--chakra-sizes-16:4rem;--chakra-sizes-20:5rem;--chakra-sizes-24:6rem;--chakra-sizes-28:7rem;--chakra-sizes-32:8rem;--chakra-sizes-36:9rem;--chakra-sizes-40:10rem;--chakra-sizes-44:11rem;--chakra-sizes-48:12rem;--chakra-sizes-52:13rem;--chakra-sizes-56:14rem;--chakra-sizes-60:15rem;--chakra-sizes-64:16rem;--chakra-sizes-72:18rem;--chakra-sizes-80:20rem;--chakra-sizes-96:24rem;--chakra-sizes-px:1px;--chakra-sizes-0-5:0.125rem;--chakra-sizes-1-5:0.375rem;--chakra-sizes-2-5:0.625rem;--chakra-sizes-3-5:0.875rem;--chakra-sizes-max:max-content;--chakra-sizes-min:min-content;--chakra-sizes-full:100%;--chakra-sizes-3xs:14rem;--chakra-sizes-2xs:16rem;--chakra-sizes-xs:20rem;--chakra-sizes-sm:24rem;--chakra-sizes-md:28rem;--chakra-sizes-lg:32rem;--chakra-sizes-xl:36rem;--chakra-sizes-2xl:42rem;--chakra-sizes-3xl:48rem;--chakra-sizes-4xl:56rem;--chakra-sizes-5xl:64rem;--chakra-sizes-6xl:72rem;--chakra-sizes-7xl:80rem;--chakra-sizes-8xl:90rem;--chakra-sizes-prose:60ch;--chakra-sizes-container-sm:640px;--chakra-sizes-container-md:768px;--chakra-sizes-container-lg:1024px;--chakra-sizes-container-xl:1280px;--chakra-zIndices-hide:-1;--chakra-zIndices-auto:auto;--chakra-zIndices-base:0;--chakra-zIndices-docked:10;--chakra-zIndices-dropdown:1000;--chakra-zIndices-sticky:1100;--chakra-zIndices-banner:1200;--chakra-zIndices-overlay:1300;--chakra-zIndices-modal:1400;--chakra-zIndices-popover:1500;--chakra-zIndices-skipLink:1600;--chakra-zIndices-toast:1700;--chakra-zIndices-tooltip:1800;--chakra-transition-property-common:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;--chakra-transition-property-colors:background-color,border-color,color,fill,stroke;--chakra-transition-property-dimensions:width,height;--chakra-transition-property-position:left,right,top,bottom;--chakra-transition-property-background:background-color,background-image,background-position;--chakra-transition-easing-ease-in:cubic-bezier(0.4, 0, 1, 1);--chakra-transition-easing-ease-out:cubic-bezier(0, 0, 0.2, 1);--chakra-transition-easing-ease-in-out:cubic-bezier(0.4, 0, 0.2, 1);--chakra-transition-duration-ultra-fast:50ms;--chakra-transition-duration-faster:100ms;--chakra-transition-duration-fast:150ms;--chakra-transition-duration-normal:200ms;--chakra-transition-duration-slow:300ms;--chakra-transition-duration-slower:400ms;--chakra-transition-duration-ultra-slow:500ms;--chakra-blur-none:0;--chakra-blur-sm:4px;--chakra-blur-base:8px;--chakra-blur-md:12px;--chakra-blur-lg:16px;--chakra-blur-xl:24px;--chakra-blur-2xl:40px;--chakra-blur-3xl:64px;--chakra-breakpoints-base:100px;--chakra-breakpoints-sm:480px;--chakra-breakpoints-md:768px;--chakra-breakpoints-lg:960px;--chakra-breakpoints-xl:1200px;--chakra-breakpoints-2xl:96em;}.chakra-ui-light :host:not([data-theme]),.chakra-ui-light :root:not([data-theme]),.chakra-ui-light [data-theme]:not([data-theme]),[data-theme=light] :host:not([data-theme]),[data-theme=light] :root:not([data-theme]),[data-theme=light] [data-theme]:not([data-theme]),:host[data-theme=light],:root[data-theme=light],[data-theme][data-theme=light]{--chakra-colors-chakra-body-text:var(--chakra-colors-gray-800);--chakra-colors-chakra-body-bg:var(--chakra-colors-white);--chakra-colors-chakra-border-color:var(--chakra-colors-gray-200);--chakra-colors-chakra-inverse-text:var(--chakra-colors-white);--chakra-colors-chakra-subtle-bg:var(--chakra-colors-gray-100);--chakra-colors-chakra-subtle-text:var(--chakra-colors-gray-600);--chakra-colors-chakra-placeholder-color:var(--chakra-colors-gray-500);}.chakra-ui-dark :host:not([data-theme]),.chakra-ui-dark :root:not([data-theme]),.chakra-ui-dark [data-theme]:not([data-theme]),[data-theme=dark] :host:not([data-theme]),[data-theme=dark] :root:not([data-theme]),[data-theme=dark] [data-theme]:not([data-theme]),:host[data-theme=dark],:root[data-theme=dark],[data-theme][data-theme=dark]{--chakra-colors-chakra-body-text:var(--chakra-colors-whiteAlpha-900);--chakra-colors-chakra-body-bg:var(--chakra-colors-gray-800);--chakra-colors-chakra-border-color:var(--chakra-colors-whiteAlpha-300);--chakra-colors-chakra-inverse-text:var(--chakra-colors-gray-800);--chakra-colors-chakra-subtle-bg:var(--chakra-colors-gray-700);--chakra-colors-chakra-subtle-text:var(--chakra-colors-gray-400);--chakra-colors-chakra-placeholder-color:var(--chakra-colors-whiteAlpha-400);}</style><style data-emotion="css-global" data-s="">html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;touch-action:manipulation;}body{position:relative;min-height:100%;margin:0;font-feature-settings:"kern";}:where(*, *::before, *::after){border-width:0;border-style:solid;box-sizing:border-box;word-wrap:break-word;}main{display:block;}hr{border-top-width:1px;box-sizing:content-box;height:0;overflow:visible;}:where(pre, code, kbd,samp){font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:1em;}a{background-color:transparent;color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit;}abbr[title]{border-bottom:none;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration:underline dotted;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;}:where(b, strong){font-weight:bold;}small{font-size:80%;}:where(sub,sup){font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sub{bottom:-0.25em;}sup{top:-0.5em;}img{border-style:none;}:where(button, input, optgroup, select, textarea){font-family:inherit;font-size:100%;line-height:1.15;margin:0;}:where(button, input){overflow:visible;}:where(button, select){text-transform:none;}:where(
+          button::-moz-focus-inner,
+          [type="button"]::-moz-focus-inner,
+          [type="reset"]::-moz-focus-inner,
+          [type="submit"]::-moz-focus-inner
+        ){border-style:none;padding:0;}fieldset{padding:0.35em 0.75em 0.625em;}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}progress{vertical-align:baseline;}textarea{overflow:auto;}:where([type="checkbox"], [type="radio"]){box-sizing:border-box;padding:0;}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none!important;}input[type="number"]{-moz-appearance:textfield;}input[type="search"]{-webkit-appearance:textfield;outline-offset:-2px;}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none!important;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}details{display:block;}summary{display:-webkit-box;display:-webkit-list-item;display:-ms-list-itembox;display:list-item;}template{display:none;}[hidden]{display:none!important;}:where(
+          blockquote,
+          dl,
+          dd,
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          hr,
+          figure,
+          p,
+          pre
+        ){margin:0;}button{background:transparent;padding:0;}fieldset{margin:0;padding:0;}:where(ol, ul){margin:0;padding:0;}textarea{resize:vertical;}:where(button, [role="button"]){cursor:pointer;}button::-moz-focus-inner{border:0!important;}table{border-collapse:collapse;}:where(h1, h2, h3, h4, h5, h6){font-size:inherit;font-weight:inherit;}:where(button, input, optgroup, select, textarea){padding:0;line-height:inherit;color:inherit;}:where(img, svg, video, canvas, audio, iframe, embed, object){display:block;}:where(img, video){max-width:100%;height:auto;}[data-js-focus-visible] :focus:not([data-focus-visible-added]):not(
+          [data-focus-visible-disabled]
+        ){outline:none;box-shadow:none;}select::-ms-expand{display:none;}:root,:host{--chakra-vh:100vh;}@supports (height: -webkit-fill-available){:root,:host{--chakra-vh:-webkit-fill-available;}}@supports (height: -moz-fill-available){:root,:host{--chakra-vh:-moz-fill-available;}}@supports (height: 100dvh){:root,:host{--chakra-vh:100dvh;}}</style><style data-emotion="css 1qe0iew" data-s="">.css-1qe0iew{-webkit-margin-start:auto;margin-inline-start:auto;-webkit-margin-end:auto;margin-inline-end:auto;-webkit-padding-start:var(--chakra-space-4);padding-inline-start:var(--chakra-space-4);-webkit-padding-end:var(--chakra-space-4);padding-inline-end:var(--chakra-space-4);max-width:100%;width:100%;height:100%;margin:0px;padding:0px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;color:black.100;background:var(--chakra-colors-gray-100);}</style><style data-emotion="css 1cf7k34" data-s="">.css-1cf7k34{z-index:10;height:56px;position:fixed;top:0px;right:0px;left:0px;background:var(--chakra-colors-gray-100);-webkit-padding-start:var(--chakra-space-4);padding-inline-start:var(--chakra-space-4);-webkit-padding-end:var(--chakra-space-4);padding-inline-end:var(--chakra-space-4);}</style><style data-emotion="css 1qkiwk4" data-s="">.css-1qkiwk4{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;height:var(--chakra-sizes-14);gap:30px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;z-index:100;}</style><style data-emotion="css oxzdyl" data-s="">.css-oxzdyl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;gap:29px;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;}</style><style data-emotion="css x9dvyy" data-s="">.css-x9dvyy{transition-property:var(--chakra-transition-property-common);transition-duration:var(--chakra-transition-duration-fast);transition-timing-function:var(--chakra-transition-easing-ease-out);cursor:pointer;-webkit-text-decoration:none;text-decoration:none;outline:2px solid transparent;outline-offset:2px;color:inherit;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}.css-x9dvyy:hover,.css-x9dvyy[data-hover]{-webkit-text-decoration:underline;text-decoration:underline;}.css-x9dvyy:focus-visible,.css-x9dvyy[data-focus-visible]{box-shadow:var(--chakra-shadows-outline);}</style><style data-emotion="css 1c1kq07" data-s="">.css-1c1kq07{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:8px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}</style><style data-emotion="css gha5we" data-s="">.css-gha5we{position:relative;}@media screen and (min-width: 100px){.css-gha5we{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:20px;height:16px;}}@media screen and (min-width: 768px){.css-gha5we{width:32px;height:20px;}}@media screen and (min-width: 960px){.css-gha5we{display:none;}}.css-gha5we:hover,.css-gha5we[data-hover]{cursor:pointer;}</style><style data-emotion="css 1vz2rru" data-s="">.css-1vz2rru{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;top:0px;left:0px;background:red;border-radius:20px;-webkit-transition:-webkit-transform .2s,top .3s .2s;transition:transform .2s,top .3s .2s;-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}@media screen and (min-width: 100px){.css-1vz2rru{width:20px;height:1px;}}@media screen and (min-width: 768px){.css-1vz2rru{width:32px;height:2px;}}</style><style data-emotion="css 16h3dn4" data-s="">.css-16h3dn4{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;left:0px;background:red;border-radius:20px;-webkit-transition:-webkit-transform .2s,top .3s .2s;transition:transform .2s,top .3s .2s;-webkit-transform:none;-moz-transform:none;-ms-transform:none;transform:none;}@media screen and (min-width: 100px){.css-16h3dn4{top:7px;width:20px;height:1px;}}@media screen and (min-width: 768px){.css-16h3dn4{top:9px;width:32px;height:2px;}}</style><style data-emotion="css obcra5" data-s="">.css-obcra5{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;left:0px;background:red;border-radius:20px;-webkit-transition:-webkit-transform .2s,top .3s .2s;transition:transform .2s,top .3s .2s;-webkit-transform:none;-moz-transform:none;-ms-transform:none;transform:none;}@media screen and (min-width: 100px){.css-obcra5{top:14px;width:20px;height:1px;}}@media screen and (min-width: 768px){.css-obcra5{top:18px;width:32px;height:2px;}}</style><style data-emotion="css 14w4r8s" data-s="">.css-14w4r8s{position:fixed;top:0px;left:0px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100vw;max-height:calc(100vh - 56px);overflow-y:scroll;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:var(--chakra-colors-gray-100);-webkit-transition:all 0.5s;transition:all 0.5s;-webkit-transform:translateY(calc(-100% + 56px));-moz-transform:translateY(calc(-100% + 56px));-ms-transform:translateY(calc(-100% + 56px));transform:translateY(calc(-100% + 56px));z-index:30;}@media screen and (min-width: 100px){.css-14w4r8s{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:100%;}}@media screen and (min-width: 768px){.css-14w4r8s{border-bottom:md;}}@media screen and (min-width: 960px){.css-14w4r8s{display:none;}}</style><style data-emotion="css 1j0kfv1" data-s="">.css-1j0kfv1{list-style-type:none;-webkit-margin-start:0px;margin-inline-start:0px;width:100%;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:32px;margin-bottom:32px;gap:24px;}</style><style data-emotion="css 4xcc89" data-s="">.css-4xcc89{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:80%;max-width:180px;height:2px;background-color:var(--chakra-colors-gray-400);}</style><style data-emotion="css 1mf381r" data-s="">.css-1mf381r{text-align:center;}@media screen and (min-width: 100px){.css-1mf381r{font-size:20px;}}@media screen and (min-width: 768px){.css-1mf381r{font-size:22px;}}.css-1mf381r:hover,.css-1mf381r[data-hover]{-webkit-text-decoration:underline;text-decoration:underline;}</style><style data-emotion="css 1c3h18e" data-s="">.css-1c3h18e{-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;}</style><style data-emotion="css 7vqiyt" data-s="">.css-7vqiyt{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:100%;padding:8px 20px 0 20px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}</style><style data-emotion="css 1qi7kqf" data-s="">.css-1qi7kqf{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:200px;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;}.css-1qi7kqf:hover,.css-1qi7kqf[data-hover]{cursor:pointer;-webkit-text-decoration:underline;text-decoration:underline;}</style><style data-emotion="css yubj9j" data-s="">.css-yubj9j{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:currentColor;vertical-align:middle;font-size:26px;}</style><style data-emotion="css p7rm2b" data-s="">.css-p7rm2b{margin-left:6px;font-size:20px;}</style><style data-emotion="css 1hprwxc" data-s="">.css-1hprwxc{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-top:10px;}</style><style data-emotion="css 18fh1le" data-s="">.css-18fh1le{position:relative;display:block;overflow-y:scroll;}</style><style data-emotion="css 14o0wgk" data-s="">.css-14o0wgk{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin-bottom:12px;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;}</style><style data-emotion="css 1galzv5" data-s="">.css-1galzv5{font-family:Kumbh Sans;font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-3xl);line-height:1.33;display:none;}@media screen and (min-width: 480px){.css-1galzv5{font-size:var(--chakra-fontSizes-4xl);line-height:1.2;}}</style><style data-emotion="css 3g5i6y" data-s="">.css-3g5i6y{font-family:Kumbh Sans;font-weight:var(--chakra-fontWeights-bold);font-size:24px;line-height:32px;}</style><style data-emotion="css f3bk2u" data-s="">.css-f3bk2u{font-family:Kumbh Sans;color:var(--chakra-colors-black-200);font-weight:400;font-size:16px;line-height:24px;}</style><style data-emotion="css 2y3nq3" data-s="">.css-2y3nq3{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-ms-flex-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;border-bottom:2x solid;border-color:inherit;}@media screen and (min-width: 100px){.css-2y3nq3{overflow-x:scroll;}}@media screen and (min-width: 480px){.css-2y3nq3{overflow-x:unset;}}</style><style data-emotion="css kp51sk" data-s="">.css-kp51sk{outline:2px solid transparent;outline-offset:2px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;transition-property:var(--chakra-transition-property-common);transition-duration:var(--chakra-transition-duration-normal);font-size:16px;padding-top:var(--chakra-space-2);padding-bottom:var(--chakra-space-2);-webkit-padding-start:var(--chakra-space-4);padding-inline-start:var(--chakra-space-4);-webkit-padding-end:var(--chakra-space-4);padding-inline-end:var(--chakra-space-4);color:var(--chakra-colors-black-200);line-height:24px;border:2px solid;border-color:var(--chakra-colors-transparent);border-top-left-radius:var(--chakra-radii-lg);border-top-right-radius:var(--chakra-radii-lg);border-bottom:var(--chakra-borders-none);padding:6px 12px;gap:8px;}.css-kp51sk:focus-visible,.css-kp51sk[data-focus-visible]{z-index:1;box-shadow:var(--chakra-shadows-outline);}.css-kp51sk:disabled,.css-kp51sk[disabled],.css-kp51sk[aria-disabled=true],.css-kp51sk[data-disabled]{cursor:not-allowed;opacity:0.4;}.css-kp51sk[aria-selected=true],.css-kp51sk[data-selected]{background:var(--chakra-colors-white);color:var(--chakra-colors-black-500);border-color:inherit;border-bottom:var(--chakra-borders-none);margin-bottom:-2px;}.css-kp51sk:hover,.css-kp51sk[data-hover]{background:var(--chakra-colors-gray-200);color:var(--chakra-colors-black-500);border-color:inherit;}.css-kp51sk:hover[aria-selected=true],.css-kp51sk[data-hover][aria-selected=true],.css-kp51sk:hover[data-selected],.css-kp51sk[data-hover][data-selected]{background:var(--chakra-colors-white);}</style><style data-emotion="css onkibi" data-s="">.css-onkibi{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:currentColor;vertical-align:middle;}</style><style data-emotion="css 8atqhb" data-s="">.css-8atqhb{width:100%;}</style><style data-emotion="css 15zvaxn" data-s="">.css-15zvaxn{padding:var(--chakra-space-4);border-top:2px solid;border-color:inherit;outline:2px solid transparent;outline-offset:2px;}</style><style data-emotion="css 15n7aez" data-s="">.css-15n7aez{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-bottom:12px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}</style><style data-emotion="css 19685fb" data-s="">.css-19685fb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;height:100%;min-height:300px;color:var(--chakra-colors-gray-500);}</style><style data-emotion="css 9r1mdx" data-s="">.css-9r1mdx{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-red-500);vertical-align:middle;font-size:36px;margin-bottom:16px;}</style><style data-emotion="css 1iao14r" data-s="">.css-1iao14r{font-family:Kumbh Sans;line-height:1.33;margin-bottom:10px;text-align:center;font-weight:500;font-size:18px;}@media screen and (min-width: 480px){.css-1iao14r{line-height:1.2;}}</style><style data-emotion="css sj50r2" data-s="">.css-sj50r2{font-family:Kumbh Sans;line-height:1.33;max-width:400px;margin-bottom:30px;text-align:center;font-weight:500;font-size:16px;}@media screen and (min-width: 480px){.css-sj50r2{line-height:1.2;}}</style><style data-emotion="css pe6bl7" data-s="">.css-pe6bl7{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;white-space:nowrap;vertical-align:middle;outline:2px solid transparent;outline-offset:2px;line-height:1.2;border-radius:var(--chakra-radii-md);font-weight:700;transition-property:var(--chakra-transition-property-common);transition-duration:var(--chakra-transition-duration-normal);font-family:Kumbh Sans;height:var(--chakra-sizes-10);min-width:var(--chakra-sizes-10);font-size:var(--chakra-fontSizes-md);-webkit-padding-start:var(--chakra-space-4);padding-inline-start:var(--chakra-space-4);-webkit-padding-end:var(--chakra-space-4);padding-inline-end:var(--chakra-space-4);background:var(--chakra-colors-red-500);color:var(--chakra-colors-white);}.css-pe6bl7:focus-visible,.css-pe6bl7[data-focus-visible]{box-shadow:var(--chakra-shadows-outline);}.css-pe6bl7:disabled,.css-pe6bl7[disabled],.css-pe6bl7[aria-disabled=true],.css-pe6bl7[data-disabled]{opacity:0.4;cursor:not-allowed;box-shadow:var(--chakra-shadows-none);}.css-pe6bl7:hover,.css-pe6bl7[data-hover]{background:var(--chakra-colors-red-600);}.css-pe6bl7:hover:disabled,.css-pe6bl7[data-hover]:disabled,.css-pe6bl7:hover[disabled],.css-pe6bl7[data-hover][disabled],.css-pe6bl7:hover[aria-disabled=true],.css-pe6bl7[data-hover][aria-disabled=true],.css-pe6bl7:hover[data-disabled],.css-pe6bl7[data-hover][data-disabled]{background:var(--chakra-colors-red-500);}.css-pe6bl7:active,.css-pe6bl7[data-active]{background:var(--chakra-colors-red-700);}</style><style data-emotion="css 1hzyiq5" data-s="">.css-1hzyiq5{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-margin-start:0.5rem;margin-inline-start:0.5rem;}</style><style data-emotion="css tscows" data-s="">.css-tscows{font-family:Kumbh Sans;font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-xl);line-height:1.2;padding-top:10px;padding-bottom:10px;}</style><style data-emotion="css al83cw" data-s="">.css-al83cw{width:100%;-webkit-margin-start:auto;margin-inline-start:auto;-webkit-margin-end:auto;margin-inline-end:auto;max-width:var(--chakra-sizes-prose);-webkit-padding-start:var(--chakra-space-4);padding-inline-start:var(--chakra-space-4);-webkit-padding-end:var(--chakra-space-4);padding-inline-end:var(--chakra-space-4);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}</style><style data-emotion="css 5xkfmc" data-s="">.css-5xkfmc{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;overflow-y:auto;}@media screen and (min-width: 100px){.css-5xkfmc{padding-bottom:16px;}}@media screen and (min-width: 768px){.css-5xkfmc{padding-bottom:0px;}}</style><style data-emotion="css 126q767" data-s="">.css-126q767{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:28px;margin-bottom:18px;}</style><style data-emotion="css j7qwjs" data-s="">.css-j7qwjs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}</style><style data-emotion="css 2cd9rd" data-s="">.css-2cd9rd{font-size:12px;line-height:16px;font-weight:500;color:var(--chakra-colors-black-300);}</style><style data-emotion="css 171onha" data-s="">.css-171onha{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:4px;}</style><style data-emotion="css d90ftu" data-s="">.css-d90ftu{width:16px;height:16px;margin-top:2px;}</style><style data-emotion="css 1d6qtn5" data-s="">.css-1d6qtn5{font-size:16px;line-height:24px;font-weight:600;}</style><style data-emotion="css tfeuq5" data-s="">.css-tfeuq5{font-size:16px;line-height:24px;font-weight:600;color:var(--chakra-colors-orange-400);}</style><style data-emotion="css 1ershow" data-s="">.css-1ershow{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;height:100%;border:1px solid;border-color:var(--chakra-colors-gray-300);border-top-left-radius:8px;border-top-right-radius:8px;border-bottom:var(--chakra-borders-none);}</style><style data-emotion="css 1rtil6m" data-s="">.css-1rtil6m{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;gap:6px;padding:8px 12px;}</style><style data-emotion="css 35ezg3" data-s="">.css-35ezg3{font-weight:600;}</style><style data-emotion="css 15irqtz" data-s="">.css-15irqtz{color:var(--chakra-colors-black-300);font-weight:600;}</style><style data-emotion="css pvvqvs" data-s="">.css-pvvqvs{width:100%;-webkit-margin-start:auto;margin-inline-start:auto;-webkit-margin-end:auto;margin-inline-end:auto;max-width:var(--chakra-sizes-prose);-webkit-padding-start:var(--chakra-space-4);padding-inline-start:var(--chakra-space-4);-webkit-padding-end:var(--chakra-space-4);padding-inline-end:var(--chakra-space-4);height:500px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}</style><style data-emotion="css 1yvuo8w" data-s="">.css-1yvuo8w{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:8px 12px;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;height:100%;-webkit-flex-basis:150px;-ms-flex-preferred-size:150px;flex-basis:150px;border:1px solid;border-color:var(--chakra-colors-gray-300);border-bottom:var(--chakra-borders-none);}</style><style data-emotion="css 1qa4d6g" data-s="">.css-1qa4d6g{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;gap:0.5rem;width:100%;-webkit-align-self:start;-ms-flex-item-align:start;align-self:start;margin-bottom:8px;}</style><style data-emotion="css 3bjqmo" data-s="">.css-3bjqmo{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:currentColor;vertical-align:middle;font-size:20px;cursor:pointer;}</style><style data-emotion="css 15ct8om" data-s="">.css-15ct8om{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-self:flex-end;-ms-flex-item-align:flex-end;align-self:flex-end;margin-top:12px;}</style><style data-emotion="css 2251rn" data-s="">.css-2251rn{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;white-space:nowrap;vertical-align:middle;outline:2px solid transparent;outline-offset:2px;line-height:1.2;border-radius:var(--chakra-radii-md);font-weight:700;transition-property:var(--chakra-transition-property-common);transition-duration:var(--chakra-transition-duration-normal);font-family:Kumbh Sans;height:var(--chakra-sizes-10);min-width:var(--chakra-sizes-10);font-size:var(--chakra-fontSizes-md);-webkit-padding-start:var(--chakra-space-4);padding-inline-start:var(--chakra-space-4);-webkit-padding-end:var(--chakra-space-4);padding-inline-end:var(--chakra-space-4);border:1px solid;border-color:currentColor;color:var(--chakra-colors-red-600);background:var(--chakra-colors-transparent);margin-right:20px;}.css-2251rn:focus-visible,.css-2251rn[data-focus-visible]{box-shadow:var(--chakra-shadows-outline);}.css-2251rn:disabled,.css-2251rn[disabled],.css-2251rn[aria-disabled=true],.css-2251rn[data-disabled]{opacity:0.4;cursor:not-allowed;box-shadow:var(--chakra-shadows-none);}.css-2251rn:hover,.css-2251rn[data-hover]{background:var(--chakra-colors-red-50);}.css-2251rn:hover:disabled,.css-2251rn[data-hover]:disabled,.css-2251rn:hover[disabled],.css-2251rn[data-hover][disabled],.css-2251rn:hover[aria-disabled=true],.css-2251rn[data-hover][aria-disabled=true],.css-2251rn:hover[data-disabled],.css-2251rn[data-hover][data-disabled]{background:initial;}.chakra-button__group[data-attached][data-orientation=horizontal]>.css-2251rn:not(:last-of-type){-webkit-margin-end:-1px;margin-inline-end:-1px;}.chakra-button__group[data-attached][data-orientation=vertical]>.css-2251rn:not(:last-of-type){margin-bottom:-1px;}.css-2251rn:active,.css-2251rn[data-active]{background:var(--chakra-colors-red-100);}</style><style data-emotion="css" data-s=""></style><script async="" src="./Airbnb SQL Interview Question _ DataLemur_files/hotjar-3798087.js.download"></script><script async="" src="./Airbnb SQL Interview Question _ DataLemur_files/modules.625495a901d247c3e8d4.js.download" charset="utf-8"></script><link as="script" rel="prefetch" href="./Airbnb SQL Interview Question _ DataLemur_files/9136-7f5d057a6ef88c84.js.download"><link as="script" rel="prefetch" href="./Airbnb SQL Interview Question _ DataLemur_files/profile-b11bfc6273e1a816.js.download"><link as="script" rel="prefetch" href="./Airbnb SQL Interview Question _ DataLemur_files/account-settings-0ee5a6a049f93bd1.js.download"><link as="script" rel="prefetch" href="./Airbnb SQL Interview Question _ DataLemur_files/premium-b27937838fa143d3.js.download"><link as="script" rel="prefetch" href="./Airbnb SQL Interview Question _ DataLemur_files/questions-a71f41cbde2e5460.js.download"><link as="script" rel="prefetch" href="./Airbnb SQL Interview Question _ DataLemur_files/index-a3b36f4fe3e2d00b.js.download"><script src="./Airbnb SQL Interview Question _ DataLemur_files/v3"></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/404"></script></head><body class="chakra-ui-light"><noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZZK2KV&gtm_auth=&gtm_preview=&gtm_cookies_win=x"
+        height="0" width="0" style="display:none;visibility:hidden" id="tag-manager"></iframe></noscript><div id="__next"><style>
+      #nprogress {
+        pointer-events: none;
+      }
+      #nprogress .bar {
+        background: #FC8181;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+      }
+      #nprogress .peg {
+        display: block;
+        position: absolute;
+        right: 0px;
+        width: 100px;
+        height: 100%;
+        box-shadow: 0 0 10px #FC8181, 0 0 5px #FC8181;
+        opacity: 1;
+        -webkit-transform: rotate(3deg) translate(0px, -4px);
+        -ms-transform: rotate(3deg) translate(0px, -4px);
+        transform: rotate(3deg) translate(0px, -4px);
+      }
+      #nprogress .spinner {
+        display: block;
+        position: fixed;
+        z-index: 1031;
+        top: 15px;
+        right: 15px;
+      }
+      #nprogress .spinner-icon {
+        width: 18px;
+        height: 18px;
+        box-sizing: border-box;
+        border: solid 2px transparent;
+        border-top-color: #FC8181;
+        border-left-color: #FC8181;
+        border-radius: 50%;
+        -webkit-animation: nprogresss-spinner 400ms linear infinite;
+        animation: nprogress-spinner 400ms linear infinite;
+      }
+      .nprogress-custom-parent {
+        overflow: hidden;
+        position: relative;
+      }
+      .nprogress-custom-parent #nprogress .spinner,
+      .nprogress-custom-parent #nprogress .bar {
+        position: absolute;
+      }
+      @-webkit-keyframes nprogress-spinner {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @keyframes nprogress-spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style><div class="chakra-container Layout_layout__Sde6S Question_layout__6rvn8 css-1qe0iew"><div class="css-1cf7k34"><div class="css-1qkiwk4"><div class="css-oxzdyl"><a class="chakra-link css-x9dvyy" href="https://datalemur.com/"><img alt="logo" loading="lazy" width="161" height="32" decoding="async" data-nimg="1" style="color:transparent" src="./Airbnb SQL Interview Question _ DataLemur_files/Logo.svg"></a><div class="css-1bc4ij3"><button type="button" class="chakra-button css-itz208"><span class="chakra-button__icon css-1wh2kri"><svg viewBox="0 0 14 12" focusable="false" class="chakra-icon css-nyt2fo" aria-hidden="true"><svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 11L1 6M1 6L6 1M1 6H13" stroke="currentColor" stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"></path></svg></svg></span>All questions</button><a class="chakra-link chakra-button css-ud5xzo" href="https://datalemur.com/questions/sql-bloomberg-stock-min-max-1" id="popover-trigger-:r6:" aria-haspopup="dialog" aria-expanded="false" aria-controls="popover-content-:r6:"><svg viewBox="0 0 8 12" focusable="false" class="chakra-icon css-l808u0"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 11L1.5 6L6.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></svg></a><div class="chakra-popover__popper css-1qq679y" style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;"><section id="popover-content-:r6:" tabindex="-1" role="tooltip" class="chakra-popover__content css-t7dczn" style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);"><div data-popper-arrow="" class="chakra-popover__arrow-positioner css-0" style="position: absolute;"><div class="chakra-popover__arrow css-0" data-popper-arrow-inner=""></div></div><div class="chakra-stack css-x1be7"><p class="chakra-text css-tdwsm5">Previous SQL question</p><p class="chakra-text css-cn36q7">FAANG Stock Min-Max (Part 1)</p><div class="chakra-stack css-cp3a5l"><img alt="Bloomberg icon" src="./Airbnb SQL Interview Question _ DataLemur_files/company=bloomberg.png" class="chakra-image css-d90ftu"><p class="chakra-text css-asmkv1">Bloomberg</p><svg viewBox="0 0 4 3" focusable="false" class="chakra-icon css-ymcv19"><svg width="4" height="3" viewBox="0 0 4 3" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2.59375C1.67708 2.59375 1.40365 2.48438 1.17969 2.26562C0.960938 2.04167 0.851562 1.77083 0.851562 1.45312C0.851562 1.13542 0.960938 0.867188 1.17969 0.648438C1.40365 0.424479 1.67708 0.3125 2 0.3125C2.32812 0.3125 2.60156 0.424479 2.82031 0.648438C3.03906 0.867188 3.14844 1.13542 3.14844 1.45312C3.14844 1.77083 3.03906 2.04167 2.82031 2.26562C2.60156 2.48438 2.32812 2.59375 2 2.59375Z" fill="currentColor"></path></svg></svg><p class="chakra-text css-tfeuq5">Medium</p></div></div></section></div><a class="chakra-link chakra-button css-ud5xzo" href="https://datalemur.com/questions/amazon-shopping-spree" id="popover-trigger-:r8:" aria-haspopup="dialog" aria-expanded="false" aria-controls="popover-content-:r8:"><svg viewBox="0 0 8 12" focusable="false" class="chakra-icon css-l808u0"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 1L6.5 6L1.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></svg></a><div class="chakra-popover__popper css-1qq679y" style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;"><section id="popover-content-:r8:" tabindex="-1" role="tooltip" class="chakra-popover__content css-t7dczn" style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);"><div data-popper-arrow="" class="chakra-popover__arrow-positioner css-0" style="position: absolute;"><div class="chakra-popover__arrow css-0" data-popper-arrow-inner=""></div></div><div class="chakra-stack css-x1be7"><p class="chakra-text css-tdwsm5">Next SQL question</p><p class="chakra-text css-cn36q7">User Shopping Sprees</p><div class="chakra-stack css-cp3a5l"><img alt="Amazon icon" src="./Airbnb SQL Interview Question _ DataLemur_files/company=amazon.png" class="chakra-image css-d90ftu"><p class="chakra-text css-asmkv1">Amazon</p><svg viewBox="0 0 4 3" focusable="false" class="chakra-icon css-ymcv19"><svg width="4" height="3" viewBox="0 0 4 3" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2.59375C1.67708 2.59375 1.40365 2.48438 1.17969 2.26562C0.960938 2.04167 0.851562 1.77083 0.851562 1.45312C0.851562 1.13542 0.960938 0.867188 1.17969 0.648438C1.40365 0.424479 1.67708 0.3125 2 0.3125C2.32812 0.3125 2.60156 0.424479 2.82031 0.648438C3.03906 0.867188 3.14844 1.13542 3.14844 1.45312C3.14844 1.77083 3.03906 2.04167 2.82031 2.26562C2.60156 2.48438 2.32812 2.59375 2 2.59375Z" fill="currentColor"></path></svg></svg><p class="chakra-text css-tfeuq5">Medium</p></div></div></section></div></div></div><div class="css-1c1kq07"><button type="button" class="chakra-button css-1msrslj"><span class="chakra-button__icon css-1wh2kri"><svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-nyt2fo" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 5.5H5C4.60218 5.5 4.22064 5.65804 3.93934 5.93934C3.65804 6.22064 3.5 6.60218 3.5 7V13C3.5 13.3978 3.65804 13.7794 3.93934 14.0607C4.22064 14.342 4.60218 14.5 5 14.5H11C11.3978 14.5 11.7794 14.342 12.0607 14.0607C12.342 13.7794 12.5 13.3978 12.5 13V7C12.5 6.60218 12.342 6.22064 12.0607 5.93934C11.7794 5.65804 11.3978 5.5 11 5.5H10M10 3.5L8 1.5M8 1.5L6 3.5M8 1.5V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></svg></span>Share</button><div class="css-70qvj9"><p class="chakra-text css-10t6blf">Hamed Vaheb</p><button type="button" class="chakra-button chakra-menu__menu-button css-w6qvmv" id="menu-button-:r1:" aria-expanded="false" aria-haspopup="menu" aria-controls="menu-list-:r1:"><span class="css-xl71ch"><span class="chakra-avatar css-23yd5v"><div role="img" aria-label="Hamed Vaheb" class="chakra-avatar__initials css-1ebyn6">HV</div></span></span></button><div class="css-r6z5ec" style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;"><div class="chakra-menu__menu-list css-1kfu8nn" tabindex="-1" role="menu" id="menu-list-:r1:" aria-orientation="vertical" style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0px);"><button type="button" id="menu-list-:r1:-menuitem-:r2:" role="menuitem" tabindex="-1" class="chakra-menu__menuitem css-16e8pe7" data-index="0"><a class="chakra-link css-dwf7tp" href="https://datalemur.com/profile">Your Performance</a></button><button type="button" id="menu-list-:r1:-menuitem-:r3:" role="menuitem" tabindex="-1" class="chakra-menu__menuitem css-16e8pe7" data-index="1"><a class="chakra-link css-dwf7tp" href="https://datalemur.com/account-settings">Account Settings</a></button><button type="button" id="menu-list-:r1:-menuitem-:r4:" role="menuitem" tabindex="-1" class="chakra-menu__menuitem css-16e8pe7" data-index="2"><a class="chakra-link css-dwf7tp" href="https://datalemur.com/premium">Premium</a></button><button type="button" id="menu-list-:r1:-menuitem-:r9:" role="menuitem" tabindex="-1" class="chakra-menu__menuitem css-16e8pe7" data-index="3">Log out</button></div></div></div></div></div><div class="css-14w4r8s"><ul role="list" class="css-1j0kfv1"><div class="css-4xcc89"></div><li class="css-0"><a href="https://datalemur.com/questions"><p class="chakra-text css-1mf381r">Practice Interview Questions</p></a></li><li class="css-0"><a href="https://datalemur.com/sql-tutorial"><p class="chakra-text css-1mf381r">Learn SQL</p></a></li><li class="css-0"><a href="https://datalemur.com/pricing"><p class="chakra-text css-1mf381r">Get 1:1 Coaching</p></a></li><div class="css-4xcc89"></div><div class="css-obuxz9"><div class="css-gmuwbf"><p class="chakra-text css-41myra">Hamed Vaheb</p><span class="chakra-avatar css-23yd5v"><div role="img" aria-label="Hamed Vaheb" class="chakra-avatar__initials css-1ebyn6">HV</div></span></div><a class="chakra-link css-6rnazp" href="https://datalemur.com/profile">Your Performance</a><a class="chakra-link css-6rnazp" href="https://datalemur.com/account-settings">Account Settings</a><a class="chakra-link css-6rnazp" href="https://datalemur.com/premium">Premium</a><button type="button" class="chakra-button css-1fjx2h">Log out</button></div></ul></div></div><div class="Layout_content__viGx9 Question_layoutContent__JOkpM css-1c3h18e"><div class="css-7vqiyt"><div class="Question_questionContainer__6zO5R css-1hprwxc"><div style="display:flex;width:100%"><div class="chakra-tabs QuestionTabs_questionTabs__mP_QF css-18fh1le" style="width: calc(50% - 2px);"><div class="css-14o0wgk"><h1 class="chakra-heading css-1galzv5">Booking Referral Source Airbnb SQL Interview Question</h1><h2 class="chakra-heading css-3g5i6y">Booking Referral Source</h2><h2 class="chakra-heading css-f3bk2u">Airbnb SQL Interview Question</h2></div><div role="tablist" aria-orientation="horizontal" class="chakra-tabs__tablist css-2y3nq3"><button type="button" aria-disabled="false" id="tabs-:Rbakn9f6:--tab-0" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs-:Rbakn9f6:--tabpanel-0" class="chakra-tabs__tab css-kp51sk" data-index="0"><svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-onkibi"><svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.586 5.01267C7.36667 4.32933 8.63333 4.32933 9.414 5.01267C10.1953 5.696 10.1953 6.804 9.414 7.48733C9.27867 7.60667 9.12733 7.70467 8.96733 7.782C8.47067 8.02267 8.00067 8.448 8.00067 9V9.5M14 8C14 8.78793 13.8448 9.56815 13.5433 10.2961C13.2417 11.0241 12.7998 11.6855 12.2426 12.2426C11.6855 12.7998 11.0241 13.2417 10.2961 13.5433C9.56815 13.8448 8.78793 14 8 14C7.21207 14 6.43185 13.8448 5.7039 13.5433C4.97595 13.2417 4.31451 12.7998 3.75736 12.2426C3.20021 11.6855 2.75825 11.0241 2.45672 10.2961C2.15519 9.56815 2 8.78793 2 8C2 6.4087 2.63214 4.88258 3.75736 3.75736C4.88258 2.63214 6.4087 2 8 2C9.5913 2 11.1174 2.63214 12.2426 3.75736C13.3679 4.88258 14 6.4087 14 8ZM8 11.5H8.00533V11.5053H8V11.5Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></svg>Question</button><button type="button" id="tabs-:Rbakn9f6:--tab-1" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabs-:Rbakn9f6:--tabpanel-1" class="chakra-tabs__tab css-kp51sk" data-index="1" aria-disabled="false"><svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-onkibi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12V8.5M8 8.5C8.33731 8.50026 8.6733 8.45793 9 8.374M8 8.5C7.66269 8.50026 7.3267 8.45793 7 8.374M9.5 13.3593C8.50886 13.5476 7.49114 13.5476 6.5 13.3593M9 14.948C8.33515 15.0176 7.66485 15.0176 7 14.948M9.5 12V11.872C9.5 11.2167 9.93867 10.6567 10.5053 10.328C11.4573 9.7767 12.2009 8.92681 12.6209 7.91003C13.0409 6.89325 13.1139 5.76633 12.8284 4.70389C12.543 3.64146 11.9152 2.70281 11.0422 2.03339C10.1692 1.36397 9.09978 1.00115 7.99967 1.00115C6.89956 1.00115 5.83015 1.36397 4.95716 2.03339C4.08416 2.70281 3.45631 3.64146 3.17089 4.70389C2.88546 5.76633 2.9584 6.89325 3.37839 7.91003C3.79839 8.92681 4.542 9.7767 5.494 10.328C6.06067 10.6567 6.5 11.2167 6.5 11.872V12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></svg>Solution</button><button type="button" id="tabs-:Rbakn9f6:--tab-2" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabs-:Rbakn9f6:--tabpanel-2" class="chakra-tabs__tab css-kp51sk" data-index="2" aria-disabled="false"><svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-onkibi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 5.674C14.0893 5.86333 14.5 6.426 14.5 7.072V9.92933C14.5 10.6867 13.9353 11.3293 13.18 11.3913C12.9533 11.4093 12.7267 11.426 12.5 11.4393V13.5L10.5 11.5C9.59733 11.5 8.704 11.4633 7.82 11.3913C7.62755 11.3758 7.44035 11.3209 7.27 11.23M13.5 5.674C13.397 5.64084 13.2905 5.61959 13.1827 5.61067C11.3973 5.46246 9.60271 5.46246 7.81733 5.61067C7.06333 5.67333 6.5 6.31533 6.5 7.072V9.92933C6.5 10.4873 6.80667 10.9827 7.27 11.23M13.5 5.674V4.42467C13.5 3.344 12.732 2.40733 11.66 2.268C10.2805 2.0892 8.89099 1.99968 7.5 2C6.09 2 4.70133 2.09133 3.34 2.268C2.268 2.40733 1.5 3.344 1.5 4.42467V8.57533C1.5 9.656 2.268 10.5927 3.34 10.732C3.72467 10.782 4.11133 10.8253 4.5 10.8613V14L7.27 11.23" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></svg>Discussion</button><button type="button" id="tabs-:Rbakn9f6:--tab-3" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabs-:Rbakn9f6:--tabpanel-3" class="chakra-tabs__tab css-kp51sk" data-index="3" aria-disabled="false"><svg viewBox="0 0 16 16" focusable="false" class="chakra-icon css-onkibi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V9H11M2.19588 6.5C2.87655 3.937 5.24826 2 8 2C11.268 2 14 4.732 14 8C14 11.231 11.2628 14 8 14C5.60052 14 3.37158 12.5047 2.45673 10.2961M2.19588 6.5L1 3.5M2.19588 6.5L5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></svg>Submissions</button></div><div class="chakra-tabs__tab-panels css-8atqhb"><div tabindex="0" role="tabpanel" aria-labelledby="tabs-:Rbakn9f6:--tab-0" id="tabs-:Rbakn9f6:--tabpanel-0" class="chakra-tabs__tab-panel css-15zvaxn"><div class="css-15n7aez"></div><div class="Markdown_reactMarkdown__X0aZ_"><p>The Airbnb marketing analytics team is trying to understand what are the most common marketing channels that lead users to book their first rental on Airbnb.</p>
+<p>Write a query to find the top marketing channel and percentage of first rental bookings from the aforementioned marketing channel. Round the percentage to the closest integer. Assume there are no ties.</p>
+<p><strong>Assumptions:</strong></p>
+<ul>
+<li>Marketing <code>channel</code> with null values should be incorporated in the percentage of first bookings calculation, but the top channel should not be a null value. Meaning, we cannot have null as the top marketing channel.</li>
+<li>To avoid integer division, multiple the percentage with 100.0 and not 100.</li>
+</ul>
+<h3 class="chakra-heading css-ajgoem" level="3" node="[object Object]"><code>bookings</code> Table:</h3>
+<div style="overflow-x: auto; margin-bottom: 10px;"><table><thead><tr><th style="text-align: left;"><strong>Column Name</strong></th><th style="text-align: left;"><strong>Type</strong></th></tr></thead><tbody><tr><td style="text-align: left;">booking_id</td><td style="text-align: left;">integer</td></tr><tr><td style="text-align: left;">user_id</td><td style="text-align: left;">integer</td></tr><tr><td style="text-align: left;">booking_date</td><td style="text-align: left;">datetime</td></tr></tbody></table></div>
+<h3 class="chakra-heading css-ajgoem" level="3" node="[object Object]"><code>bookings</code> Example Input:</h3>
+<div style="overflow-x: auto; margin-bottom: 10px;"><table><thead><tr><th style="text-align: left;">booking_id</th><th style="text-align: left;">user_id</th><th style="text-align: left;">booking_date</th></tr></thead><tbody><tr><td style="text-align: left;">1</td><td style="text-align: left;">1</td><td style="text-align: left;">01/01/2022 00:00:00</td></tr><tr><td style="text-align: left;">2</td><td style="text-align: left;">1</td><td style="text-align: left;">01/06/2022 00:00:00</td></tr><tr><td style="text-align: left;">6</td><td style="text-align: left;">2</td><td style="text-align: left;">01/06/2022 00:00:00</td></tr><tr><td style="text-align: left;">8</td><td style="text-align: left;">3</td><td style="text-align: left;">01/06/2022 00:00:00</td></tr></tbody></table></div>
+<h3 class="chakra-heading css-ajgoem" level="3" node="[object Object]"><code>booking_attribution</code> Table:</h3>
+<div style="overflow-x: auto; margin-bottom: 10px;"><table><thead><tr><th style="text-align: left;"><strong>Column Name</strong></th><th style="text-align: left;"><strong>Type</strong></th></tr></thead><tbody><tr><td style="text-align: left;">booking_id</td><td style="text-align: left;">integer</td></tr><tr><td style="text-align: left;">channel</td><td style="text-align: left;">string</td></tr></tbody></table></div>
+<h3 class="chakra-heading css-ajgoem" level="3" node="[object Object]"><code>booking_attribution</code> Example Input:</h3>
+<div style="overflow-x: auto; margin-bottom: 10px;"><table><thead><tr><th style="text-align: left;"><strong>booking_id</strong></th><th style="text-align: left;"><strong>channel</strong></th></tr></thead><tbody><tr><td style="text-align: left;">1</td><td style="text-align: left;">organic search</td></tr><tr><td style="text-align: left;">2</td><td style="text-align: left;"></td></tr><tr><td style="text-align: left;">3</td><td style="text-align: left;">organic search</td></tr><tr><td style="text-align: left;">4</td><td style="text-align: left;">referral</td></tr><tr><td style="text-align: left;">5</td><td style="text-align: left;">email</td></tr><tr><td style="text-align: left;">6</td><td style="text-align: left;">organic search</td></tr><tr><td style="text-align: left;">7</td><td style="text-align: left;">paid search</td></tr><tr><td style="text-align: left;">8</td><td style="text-align: left;"></td></tr><tr><td style="text-align: left;">9</td><td style="text-align: left;">paid search</td></tr><tr><td style="text-align: left;">10</td><td style="text-align: left;">paid search</td></tr></tbody></table></div>
+<h3 class="chakra-heading css-ajgoem" level="3" node="[object Object]">Example Output:</h3>
+<div style="overflow-x: auto; margin-bottom: 10px;"><table><thead><tr><th style="text-align: left;"><strong>channel</strong></th><th style="text-align: left;"><strong>first_booking_pct</strong></th></tr></thead><tbody><tr><td style="text-align: left;">organic search</td><td style="text-align: left;">67</td></tr></tbody></table></div>
+<h3 class="chakra-heading css-ajgoem" level="3" node="[object Object]">Explanation:</h3>
+<p>We know that user 1's first booking was organic search, user 2's was organic search, and user 3's was null. Thus, 2 bookings via organic search / 3 total bookings = 67%.</p>
+<p>The dataset you are querying against may have different input &amp; output - <strong>this is just an example</strong>!</p></div><button type="button" class="chakra-button css-yj6f6x">Gimme a Hint</button></div><div tabindex="0" role="tabpanel" aria-labelledby="tabs-:Rbakn9f6:--tab-1" hidden="" id="tabs-:Rbakn9f6:--tabpanel-1" class="chakra-tabs__tab-panel css-15zvaxn"><h3 class="chakra-heading css-tscows">Solution</h3><div class="Markdown_reactMarkdown__X0aZ_"><p><strong>Step 1</strong></p>
+<p>As the first step, let's gather all of the information into one dataset by joining the <code>bookings</code> and <code>booking_attribution</code> tables on the <code>booking_id</code> field.</p>
+<p>Furthermore, since the question is asking for the percentage of first bookings, we will need to identify each user's first booking. We can do so by creating a new column <code>booking_no</code> and using the  <code>ROW_NUMBER()</code> window function while ordering by sequence using <code>booking_date</code> in ascending order.</p>
+<pre><div style="text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; color: rgb(144, 164, 174); background: rgb(250, 250, 250); font-family: &quot;Roboto Mono&quot;, monospace; font-size: 1em; line-height: 1.5em; tab-size: 4; hyphens: none; overflow: auto; position: relative; margin: 0.5em 0px; padding: 1.25em 1em;"><code style="background: inherit; white-space: pre;"><span class="token token" style="color: rgb(124, 77, 255);">SELECT</span><span> 
+</span><span>  bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>user_id</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span> </span><span class="token token" style="color: rgb(170, 191, 201);">-- this field is not required in the solution</span><span>
+</span><span>  bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_id</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span>
+</span><span>  bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_date</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span> </span><span class="token token" style="color: rgb(170, 191, 201);">-- this field is not required in the solution</span><span>
+</span><span>  ROW_NUMBER</span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">OVER</span><span> </span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span class="token token" style="color: rgb(124, 77, 255);">PARTITION</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">BY</span><span> bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>user_id
+</span><span>    </span><span class="token token" style="color: rgb(124, 77, 255);">ORDER</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">BY</span><span> bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_date</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> booking_num</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span>
+</span><span>  channels</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>channel
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">FROM</span><span> bookings
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">INNER</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">JOIN</span><span> booking_attribution </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> channels
+</span><span>  </span><span class="token token" style="color: rgb(124, 77, 255);">ON</span><span> bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_id </span><span class="token token" style="color: rgb(57, 173, 181);">=</span><span> channels</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_id</span><span class="token token" style="color: rgb(57, 173, 181);">;</span></code></div></pre>
+<p>Showing the partial output:</p>
+<div style="overflow-x: auto; margin-bottom: 10px;"><table><thead><tr><th style="text-align: left;">user_id</th><th style="text-align: left;">booking_id</th><th style="text-align: left;">booking_date</th><th style="text-align: left;">booking_no</th><th style="text-align: left;">channel</th></tr></thead><tbody><tr><td style="text-align: left;">1</td><td style="text-align: left;">1</td><td style="text-align: left;">01/01/2022 00:00:00</td><td style="text-align: left;">1</td><td style="text-align: left;">direct</td></tr><tr><td style="text-align: left;">1</td><td style="text-align: left;">2</td><td style="text-align: left;">01/06/2022 00:00:00</td><td style="text-align: left;">2</td><td style="text-align: left;"></td></tr><tr><td style="text-align: left;">2</td><td style="text-align: left;">6</td><td style="text-align: left;">01/06/2022 00:00:00</td><td style="text-align: left;">1</td><td style="text-align: left;">organic search</td></tr><tr><td style="text-align: left;">3</td><td style="text-align: left;">8</td><td style="text-align: left;">01/06/2022 00:00:00</td><td style="text-align: left;">1</td><td style="text-align: left;"></td></tr></tbody></table></div>
+<p>User 1 has two bookings on 01/01/2022 and 01/06/2022 respectively with the earlier booking being assigned as <code>booking_no</code> 1 and the subsequent booking assigned as <code>booking_no</code> 2. We only want the booking_no 1 which will be filtered in the next step.</p>
+<p><em>Note that <code>bookings.user_id</code> and <code>bookings.booking_date</code> fields are not required in the solution and we're only including them in the query to explain the output to you.</em></p>
+<p><strong>Step 2</strong></p>
+<p>After we're done with the essential data preprocessing, we convert the query into <code>user_bookings</code> CTE and write another query that keeps only the first bookings, and then count those bookings by channel.</p>
+<pre><div style="text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; color: rgb(144, 164, 174); background: rgb(250, 250, 250); font-family: &quot;Roboto Mono&quot;, monospace; font-size: 1em; line-height: 1.5em; tab-size: 4; hyphens: none; overflow: auto; position: relative; margin: 0.5em 0px; padding: 1.25em 1em;"><code style="background: inherit; white-space: pre;"><span class="token token" style="color: rgb(124, 77, 255);">WITH</span><span> user_bookings </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> </span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span>
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">SELECT</span><span> 
+</span><span>  bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_id</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span>
+</span><span>  bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>user_id</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span>
+</span><span>  bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_date</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span>
+</span><span>  ROW_NUMBER</span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">OVER</span><span> </span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span class="token token" style="color: rgb(124, 77, 255);">PARTITION</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">BY</span><span> bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>user_id
+</span><span>    </span><span class="token token" style="color: rgb(124, 77, 255);">ORDER</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">BY</span><span> bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_date</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> booking_no</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span>
+</span><span>  channels</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>channel
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">FROM</span><span> bookings
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">INNER</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">JOIN</span><span> booking_attribution </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> channels
+</span><span>  </span><span class="token token" style="color: rgb(124, 77, 255);">ON</span><span> bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_id </span><span class="token token" style="color: rgb(57, 173, 181);">=</span><span> channels</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_id
+</span><span></span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span>
+</span>
+<span></span><span class="token token" style="color: rgb(124, 77, 255);">SELECT</span><span> 
+</span><span>  channel</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span> 
+</span><span>  </span><span class="token token" style="color: rgb(124, 77, 255);">COUNT</span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span class="token token" style="color: rgb(57, 173, 181);">*</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> channel_booking
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">FROM</span><span> user_bookings
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">WHERE</span><span> booking_no </span><span class="token token" style="color: rgb(57, 173, 181);">=</span><span> </span><span class="token token" style="color: rgb(247, 109, 71);">1</span><span>
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">GROUP</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">BY</span><span> channel</span><span class="token token" style="color: rgb(57, 173, 181);">;</span></code></div></pre>
+<p>Output is showing the number of bookings for each marketing channel:</p>
+<div style="overflow-x: auto; margin-bottom: 10px;"><table><thead><tr><th style="text-align: left;">channel</th><th style="text-align: left;">channel_booking</th></tr></thead><tbody><tr><td style="text-align: left;">direct</td><td style="text-align: left;">2</td></tr><tr><td style="text-align: left;">organic search</td><td style="text-align: left;">1</td></tr><tr><td style="text-align: left;">paid search</td><td style="text-align: left;">1</td></tr><tr><td style="text-align: left;"></td><td style="text-align: left;">1</td></tr></tbody></table></div>
+<p>You might be wondering:</p>
+<ul>
+<li>"What's the last row with a <code>channel_booking</code> of 1?"</li>
+<li>"Why can't we calculate the percentage of first rental bookings in this query?"</li>
+</ul>
+<p>Good question! (Interviewers love it when you think outside the box and ask questions like this!)</p>
+<p>One of the question's assumptions says "<code>channel</code> with null values should be <strong>incorporated</strong> in the percentage of first bookings calculation, but the output of top channel should not be a null value.".</p>
+<p>With that said, if we were to calculate the percentage of the first booking AND exclude the channel with null values in the same query, then we would not be fulfilling the "<code>channel</code> with null values should be incorporated in the percentage of first bookings calculation" part.</p>
+<p>That's why we have to calculate the <strong>number of bookings associated with each channel</strong> INCLUDING <strong>bookings with the null channel</strong> which is presented in the last row with a <code>channel_booking</code> of 1.</p>
+<p><strong>Step 3</strong></p>
+<p>Finally, we can proceed with the calculation of percentage of first rental bookings.</p>
+<p><strong>Percentage of first rental bookings = Number of bookings from channels that are not null / Total number of bookings including null channels</strong></p>
+<p>To divide the number of bookings in each channel by the total number of bookings, we will need to use a subquery inside the SELECT statement i.e.<br>
+<code>SELECT SUM(channel_booking) FROM first_bookings</code>.</p>
+<p>This enables us to include the null channel into the calculation, even when we are filtering out the null values from the query in the <code>WHERE</code> clause. Don't forget to round the result to the closest integer!</p>
+<p>Lastly, to show only the top marketing channel, order the results by the count of bookings in descending order, and limit the rows to the first row only.</p>
+<p>That's it, good job!</p>
+<pre><div style="text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; color: rgb(144, 164, 174); background: rgb(250, 250, 250); font-family: &quot;Roboto Mono&quot;, monospace; font-size: 1em; line-height: 1.5em; tab-size: 4; hyphens: none; overflow: auto; position: relative; margin: 0.5em 0px; padding: 1.25em 1em;"><code style="background: inherit; white-space: pre;"><span class="token token" style="color: rgb(124, 77, 255);">WITH</span><span> user_bookings </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> </span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span>
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">SELECT</span><span> 
+</span><span>  bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_id</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span>
+</span><span>  ROW_NUMBER</span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">OVER</span><span> </span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span>
+</span><span>    </span><span class="token token" style="color: rgb(124, 77, 255);">PARTITION</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">BY</span><span> bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>user_id
+</span><span>    </span><span class="token token" style="color: rgb(124, 77, 255);">ORDER</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">BY</span><span> bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_date</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> booking_no</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span>
+</span><span>  channels</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>channel
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">FROM</span><span> bookings
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">INNER</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">JOIN</span><span> booking_attribution </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> channels
+</span><span>  </span><span class="token token" style="color: rgb(124, 77, 255);">ON</span><span> bookings</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_id </span><span class="token token" style="color: rgb(57, 173, 181);">=</span><span> channels</span><span class="token token" style="color: rgb(57, 173, 181);">.</span><span>booking_id
+</span><span></span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span> 
+</span><span>first_bookings </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> </span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span>
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">SELECT</span><span> 
+</span><span>  channel</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span> 
+</span><span>  </span><span class="token token" style="color: rgb(124, 77, 255);">COUNT</span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span class="token token" style="color: rgb(57, 173, 181);">*</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> channel_booking
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">FROM</span><span> user_bookings
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">WHERE</span><span> booking_no </span><span class="token token" style="color: rgb(57, 173, 181);">=</span><span> </span><span class="token token" style="color: rgb(247, 109, 71);">1</span><span>
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">GROUP</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">BY</span><span> channel
+</span><span></span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span>
+</span>
+<span></span><span class="token token" style="color: rgb(124, 77, 255);">SELECT</span><span> 
+</span><span>  channel</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span> 
+</span><span>  </span><span class="token token" style="color: rgb(124, 77, 255);">ROUND</span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span class="token token" style="color: rgb(247, 109, 71);">100.0</span><span> </span><span class="token token" style="color: rgb(57, 173, 181);">*</span><span> </span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span>channel_booking </span><span class="token token" style="color: rgb(57, 173, 181);">/</span><span> 
+</span><span>    </span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span class="token token" style="color: rgb(124, 77, 255);">SELECT</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">SUM</span><span class="token token" style="color: rgb(57, 173, 181);">(</span><span>channel_booking</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">FROM</span><span> first_bookings</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span class="token token" style="color: rgb(57, 173, 181);">,</span><span> </span><span class="token token" style="color: rgb(247, 109, 71);">0</span><span class="token token" style="color: rgb(57, 173, 181);">)</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">AS</span><span> first_booking_pct
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">FROM</span><span> first_bookings
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">WHERE</span><span> channel </span><span class="token token" style="color: rgb(57, 173, 181);">IS</span><span> </span><span class="token token" style="color: rgb(57, 173, 181);">NOT</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">NULL</span><span>
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">ORDER</span><span> </span><span class="token token" style="color: rgb(124, 77, 255);">BY</span><span> first_booking_pct </span><span class="token token" style="color: rgb(124, 77, 255);">DESC</span><span>
+</span><span></span><span class="token token" style="color: rgb(124, 77, 255);">LIMIT</span><span> </span><span class="token token" style="color: rgb(247, 109, 71);">1</span><span class="token token" style="color: rgb(57, 173, 181);">;</span></code></div></pre></div></div><div tabindex="0" role="tabpanel" aria-labelledby="tabs-:Rbakn9f6:--tab-2" hidden="" id="tabs-:Rbakn9f6:--tabpanel-2" class="chakra-tabs__tab-panel css-15zvaxn"><div class="css-lrvccz"><div class="css-134o37c"><div class="chakra-wrap css-ynkstv"><ul class="chakra-wrap__list css-19lo6pj"><div class="chakra-input__group css-vh9yad" data-group="true"><div class="chakra-input__left-element css-j2xror"><svg viewBox="0 0 16 14" focusable="false" class="chakra-icon css-8w3kun"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 7.50667C1.5 8.57333 2.24867 9.50267 3.30467 9.658C4.01667 9.76267 4.73667 9.844 5.46333 9.90067C5.774 9.92533 6.05867 10.088 6.232 10.348L8 13L9.768 10.348C9.94133 10.088 10.226 9.92533 10.5367 9.90133C11.2633 9.844 11.9833 9.76267 12.6953 9.658C13.7513 9.50267 14.5 8.574 14.5 7.506V3.494C14.5 2.426 13.7513 1.49733 12.6953 1.342C11.1406 1.11381 9.57135 0.999507 8 1C6.40533 1 4.83733 1.11667 3.30467 1.342C2.24867 1.49733 1.5 2.42667 1.5 3.494V7.506V7.50667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></svg></div><input placeholder="Add a comment" class="chakra-input css-156ogq4"></div></ul></div><div class="css-lsxtz8"><p class="chakra-text css-1xqzysv">Sort:</p><button type="button" class="chakra-button chakra-menu__menu-button css-x17ymz" id="menu-button-:re:" aria-expanded="false" aria-haspopup="menu" aria-controls="menu-list-:re:"><span class="css-xl71ch">Most Votes</span><span class="chakra-button__icon css-1hzyiq5"><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-onkibi" aria-hidden="true"><path fill="currentColor" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg></span></button><div class="css-r6z5ec" style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;"><div class="chakra-menu__menu-list css-1kfu8nn" tabindex="-1" role="menu" id="menu-list-:re:" aria-orientation="vertical" style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0px);"><button type="button" id="menu-list-:re:-menuitem-:rf:" role="menuitem" tabindex="-1" class="chakra-menu__menuitem css-16e8pe7" data-index="0">Most Votes</button><button type="button" id="menu-list-:re:-menuitem-:rg:" role="menuitem" tabindex="-1" class="chakra-menu__menuitem css-16e8pe7" data-index="1">Newest to Oldest</button><button type="button" id="menu-list-:re:-menuitem-:rh:" role="menuitem" tabindex="-1" class="chakra-menu__menuitem css-16e8pe7" data-index="2">Oldest to Newest</button></div></div></div></div><div class="css-qfvxkj"></div></div><div></div></div><div tabindex="0" role="tabpanel" aria-labelledby="tabs-:Rbakn9f6:--tab-3" id="tabs-:Rbakn9f6:--tabpanel-3" class="chakra-tabs__tab-panel css-15zvaxn" hidden=""><div class="css-j7qwjs"><div class="css-au9j7x"><p class="chakra-text css-1mdk0yg">Accepted</p><p class="chakra-text css-164r41r">Congrats 🎉 - Share this problem, and your solution, on LinkedIn or Twitter!</p><div class="css-1wnzdoc"></div><p class="chakra-text css-0">In your post, don’t forget to tag Nick Singh, so that he can comment on and share your post with his audience of 150k+ followers on <a target="_blank" rel="noopener noreferrer" class="chakra-link css-1vpv3fz" href="https://www.linkedin.com/in/nick-singh-tech">LinkedIn</a> and 25k+ followers on <a target="_blank" rel="noopener noreferrer" class="chakra-link css-1vpv3fz" href="https://twitter.com/NickSinghTech">Twitter</a> (which will give your post and profile more visibility)!</p><div class="css-bmxr3d"><div class="css-2ix0ts"><p class="chakra-text css-f1uxo9">Output</p><div class="chakra-table__container css-1qgm91r"><table class="chakra-table css-5605sr"><thead class="css-8lh9qs"><tr class="css-0"><th class="css-twdctb">channel</th><th class="css-twdctb">first_booking_pct</th></tr></thead><tbody class="css-7fzzdq"><tr class="css-0"><td title="direct" class="css-1vmvwla">direct</td><td title="40" class="css-1vmvwla">40</td></tr></tbody></table></div></div><div class="css-2ix0ts"><p class="chakra-text css-f1uxo9">Expected</p><div class="chakra-table__container css-1qgm91r"><table class="chakra-table css-5605sr"><thead class="css-8lh9qs"><tr class="css-0"><th class="css-twdctb">channel</th><th class="css-twdctb">first_booking_pct</th></tr></thead><tbody class="css-7fzzdq"><tr class="css-0"><td title="direct" class="css-1vmvwla">direct</td><td title="40" class="css-1vmvwla">40</td></tr></tbody></table></div></div></div></div><div class="chakra-table__container css-c53i0p"><table class="chakra-table css-5605sr"><thead class="css-0"><tr class="css-0"><th class="css-mgsf2h">Time</th><th class="css-mgsf2h">Status</th><th class="css-mgsf2h">Your Submission</th></tr></thead><tbody class="css-1414bdd"><tr class="css-0"><td class="css-1qu87aa">11/01/2024 20:27</td><td class="css-nxie3p">Solved</td><td class="css-nxie3p"><button type="button" class="chakra-button css-lejf5o">Copy To Clipboard</button></td></tr><tr class="css-0"><td class="css-1qu87aa">11/01/2024 20:27</td><td class="css-hezu13">Error</td><td class="css-hezu13"><button type="button" class="chakra-button css-x0mu6i">Copy To Clipboard</button></td></tr><tr class="css-0"><td class="css-1qu87aa">11/01/2024 20:26</td><td class="css-hezu13">Error</td><td class="css-hezu13"><button type="button" class="chakra-button css-x0mu6i">Copy To Clipboard</button></td></tr></tbody></table></div></div></div></div></div><div class="gutter gutter-horizontal" style="width: 4px;"></div><div class="Question_codeEditor__aUms8 css-5xkfmc" style="width: calc(50% - 2px);"><div class="css-126q767"><div class="css-j7qwjs"><p class="chakra-text css-2cd9rd">Sourced from</p><a href="https://datalemur.com/questions?company=Airbnb"><div class="css-171onha"><img alt="Airbnb icon" src="./Airbnb SQL Interview Question _ DataLemur_files/company=airbnb.png" class="chakra-image css-d90ftu"><p class="chakra-text css-1d6qtn5">Airbnb</p></div></a></div><div class="css-j7qwjs"><p class="chakra-text css-2cd9rd">Difficulty</p><a href="https://datalemur.com/questions?difficulty=Medium"><p class="chakra-text css-tfeuq5">Medium</p></a></div></div><div class="css-1ershow"><div class="chakra-stack css-1rtil6m"><p class="chakra-text css-35ezg3">Input</p><p class="chakra-text css-15irqtz">(<!-- -->PostgreSQL<!-- -->)</p></div><div id="code-editor" class=" ace_editor ace-tomorrow" style="width: 100%; height: 100%; min-height: 300px; font-size: 14px;" draggable="false"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-haspopup="false" aria-autocomplete="both" role="textbox" style="opacity: 0; font-size: 1px; height: 1px; width: 1px; top: 0px; left: 0px;"></textarea><div class="ace_gutter" aria-hidden="true" style="left: 0px; width: 49px;"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="height: 1e+06px; top: 0px; left: 0px; width: 49px;"><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 0px;">1<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 16px;">2<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 32px;">3<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 48px;">4<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 64px;">5<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 80px;">6<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 96px;">7<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 112px;">8<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 128px;">9<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 144px;">10<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 160px;">11<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 176px;">12<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 192px;">13<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 208px;">14<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 224px;">15<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 240px;">16<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 256px;">17<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 272px;">18<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 288px;">19<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 304px;">20<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div><div class="ace_gutter-cell " aria-hidden="true" style="height: 16px; top: 320px;">21<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div></div></div><div class="ace_scroller " style="line-height: 16px; left: 48.3945px; right: 19px; bottom: 0px; cursor: default;"><div class="ace_content" style="top: 0px; left: 0px; width: 624px; height: 313px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 620px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_selection ace_br1 ace_start" style="height: 16px; right: 0px; top: 0px; left: 4px;"></div><div class="ace_selection ace_br12" style="height: 16px; width: 0px; top: 304px; left: 4px;"></div><div class="ace_selection ace_br8" style="height: 288px; right: 0px; top: 16px; left: 4px;"></div></div><div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px; top: 0px; left: 0px;"><div class="ace_line" style="height: 16px; top: 0px;"><span class="ace_keyword ace_statementBegin">WITH</span> <span class="ace_identifier">BookingsExt</span> <span class="ace_keyword">AS</span> </div><div class="ace_line" style="height: 16px; top: 16px;"><span class="ace_paren ace_lparen">(</span></div><div class="ace_line" style="height: 16px; top: 32px;">  <span class="ace_keyword">SELECT</span></div><div class="ace_line" style="height: 16px; top: 48px;"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">b</span>.<span class="ace_identifier">booking_id</span>,</div><div class="ace_line" style="height: 16px; top: 64px;"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">b</span>.<span class="ace_identifier">user_id</span>,</div><div class="ace_line" style="height: 16px; top: 80px;"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">b</span>.<span class="ace_identifier">booking_date</span>,</div><div class="ace_line" style="height: 16px; top: 96px;"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">a</span>.<span class="ace_identifier">channel</span>,</div><div class="ace_line" style="height: 16px; top: 112px;"><span class="ace_indent-guide">  </span>  <span class="ace_support ace_function">ROW_NUMBER</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword">OVER</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword">PARTITION</span> <span class="ace_keyword">BY</span> <span class="ace_identifier">b</span>.<span class="ace_identifier">user_id</span> <span class="ace_keyword">ORDER</span> <span class="ace_keyword">BY</span> <span class="ace_identifier">b</span>.<span class="ace_identifier">booking_date</span> <span class="ace_keyword">ASC</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword">AS</span> <span class="ace_identifier">RN</span>,</div><div class="ace_line" style="height: 16px; top: 128px;"><span class="ace_indent-guide">  </span>  <span class="ace_support ace_function">COUNT</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">*</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword">OVER</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword">PARTITION</span> <span class="ace_keyword">BY</span> <span class="ace_identifier">b</span>.<span class="ace_identifier">user_id</span> <span class="ace_keyword">ORDER</span> <span class="ace_keyword">BY</span> <span class="ace_identifier">b</span>.<span class="ace_identifier">booking_date</span> <span class="ace_keyword">ASC</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword">AS</span> <span class="ace_identifier">COUNT_B</span></div><div class="ace_line" style="height: 16px; top: 144px;">  <span class="ace_keyword">FROM</span> <span class="ace_identifier">bookings</span> <span class="ace_identifier">b</span></div><div class="ace_line" style="height: 16px; top: 160px;">  <span class="ace_keyword">JOIN</span> <span class="ace_identifier">booking_attribution</span> <span class="ace_identifier">a</span></div><div class="ace_line" style="height: 16px; top: 176px;">  <span class="ace_keyword">ON</span> <span class="ace_identifier">a</span>.<span class="ace_identifier">booking_id</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">b</span>.<span class="ace_identifier">booking_id</span></div><div class="ace_line" style="height: 16px; top: 192px;"><span class="ace_paren ace_rparen">)</span>,</div><div class="ace_line" style="height: 16px; top: 208px;"><span class="ace_identifier">BookingsFirst</span> <span class="ace_keyword">AS</span></div><div class="ace_line" style="height: 16px; top: 224px;"><span class="ace_paren ace_lparen">(</span></div><div class="ace_line" style="height: 16px; top: 240px;">  <span class="ace_keyword">SELECT</span> <span class="ace_keyword ace_operator">*</span></div><div class="ace_line" style="height: 16px; top: 256px;">  <span class="ace_keyword">FROM</span> <span class="ace_identifier">BookingsExt</span></div><div class="ace_line" style="height: 16px; top: 272px;">  <span class="ace_keyword">WHERE</span> <span class="ace_identifier">RN</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">1</span> </div><div class="ace_line" style="height: 16px; top: 288px;"><span class="ace_paren ace_rparen">)</span>,</div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="display: block; top: 816px; left: 4px; width: 8px; height: 16px; animation-duration: 1000ms;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 24px; height: 281px; bottom: 19px;"><div class="ace_scrollbar-inner" style="width: 24px; height: 832px;">&nbsp;</div></div><div class="ace_scrollbar ace_scrollbar-h" style="height: 24px; left: 48.3945px; right: 19px; width: 597.605px;"><div class="ace_scrollbar-inner" style="height: 24px; width: 624px;">&nbsp;</div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">הההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההה</div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></div><div class="css-1yvuo8w"><div class="chakra-stack css-1qa4d6g"><p class="chakra-text css-35ezg3">Output</p><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-3bjqmo"><path fill="currentColor" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg></div><div class="css-1lf8vs5"><div class="css-2ix0ts"><div class="chakra-table__container css-1qgm91r"><table class="chakra-table css-5605sr"><thead class="css-8lh9qs"><tr class="css-0"><th class="css-twdctb">channel</th><th class="css-twdctb">first_booking_pct</th></tr></thead><tbody class="css-7fzzdq"><tr class="css-0"><td title="direct" class="css-1vmvwla">direct</td><td title="40" class="css-1vmvwla">40</td></tr></tbody></table></div></div></div><div class="css-15ct8om"><button type="button" class="chakra-button css-2251rn" disabled="">Run Code</button><button type="button" class="chakra-button css-pe6bl7">Submit</button></div></div></div></div></div></div></div></div><span id="__chakra_env" hidden=""></span></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"initialQuestionData":{"id":77,"slug":"booking-referral-source","title":"Booking Referral Source","ogTitle":"Airbnb SQL Interview Question | DataLemur","ogImage":"https://api.datalemur.com/assets/5955a044-b6f7-48f8-9110-59fd4a93f257","description":null,"seoDescription":"Airbnb SQL Interview Question: Write a query to find the top marketing channel and percentage of first rental booking.","solutionExplanation":null,"difficulty":"Medium","properQuery":null,"baseQuery":null,"company":"Airbnb","category":"SQL","accessGroups":["Premium_Questions"],"pythonFunctionQuery":null,"pythonTestCases":null,"companyInfo":{"id":29,"name":"Airbnb","icon":"7c46db97-5349-4b0e-9b8d-be020c0fe973"},"isGuarded":true},"isMobile":false},"__N_SSP":true},"page":"/questions/[questionSlug]","query":{"questionSlug":"booking-referral-source"},"buildId":"_GamQNfyrhDvUYSxwoC1Q","isFallback":false,"isExperimentalCompile":false,"gssp":true,"scriptLoader":[]}</script><next-route-announcer><p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;"></p></next-route-announcer><div class="chakra-portal"><div role="region" aria-live="polite" aria-label="Notifications-top" id="chakra-toast-manager-top" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; top: env(safe-area-inset-top, 0px); right: env(safe-area-inset-right, 0px); left: env(safe-area-inset-left, 0px);"></div><div role="region" aria-live="polite" aria-label="Notifications-top-left" id="chakra-toast-manager-top-left" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; top: env(safe-area-inset-top, 0px); left: env(safe-area-inset-left, 0px);"></div><div role="region" aria-live="polite" aria-label="Notifications-top-right" id="chakra-toast-manager-top-right" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; top: env(safe-area-inset-top, 0px); right: env(safe-area-inset-right, 0px);"></div><div role="region" aria-live="polite" aria-label="Notifications-bottom-left" id="chakra-toast-manager-bottom-left" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; bottom: env(safe-area-inset-bottom, 0px); left: env(safe-area-inset-left, 0px);"></div><div role="region" aria-live="polite" aria-label="Notifications-bottom" id="chakra-toast-manager-bottom" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; bottom: env(safe-area-inset-bottom, 0px); right: env(safe-area-inset-right, 0px); left: env(safe-area-inset-left, 0px);"></div><div role="region" aria-live="polite" aria-label="Notifications-bottom-right" id="chakra-toast-manager-bottom-right" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; bottom: env(safe-area-inset-bottom, 0px); right: env(safe-area-inset-right, 0px);"></div></div><script type="text/javascript" id="" charset="">window.heap=window.heap||[];
+heap.load=function(b,a){window.heap.appid=b;window.heap.config=a=a||{};a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://cdn.heapanalytics.com/js/heap-"+b+".js";b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);b=function(d){return function(){heap.push([d].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify resetIdentity removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};heap.load("3540127101");</script>
+<script type="text/javascript" id="" charset="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","110561152082806");fbq("set","agent","tmgoogletagmanager","110561152082806");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=110561152082806&amp;ev=PageView&amp;noscript=1"></noscript>
+<iframe id="_hjSafeContext_11631421" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="./Airbnb SQL Interview Question _ DataLemur_files/saved_resource.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><script src="./Airbnb SQL Interview Question _ DataLemur_files/questions-a71f41cbde2e5460.js.download"></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/9136-7f5d057a6ef88c84.js.download"></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/profile-b11bfc6273e1a816.js.download"></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/account-settings-0ee5a6a049f93bd1.js.download"></script><script src="./Airbnb SQL Interview Question _ DataLemur_files/premium-b27937838fa143d3.js.download"></script><div id="clerk-components"></div><script src="./Airbnb SQL Interview Question _ DataLemur_files/index-a3b36f4fe3e2d00b.js.download"></script><iframe name="__privateStripeController0961" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="./Airbnb SQL Interview Question _ DataLemur_files/controller-with-preconnect-56d461924b88a174dabdbcd7ac6d2240.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe><iframe name="__privateStripeMetricsController0960" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="./Airbnb SQL Interview Question _ DataLemur_files/m-outer-3437aaddcdf6922d623e172c2d6f9278.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe><div class=" ace_editor ace_autocomplete ace-tomorrow" style="font-size: 14px; left: 973.045px; height: 20px; top: 345.831px; display: none;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-haspopup="false" aria-autocomplete="both" role="textbox" aria-hidden="true" style="opacity: 0; font-size: 1px; top: 0px; left: -100px;"></textarea><div class="ace_gutter" aria-hidden="true" style="display: none; left: 0px; width: 41px;"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="height: 1e+06px; top: 0px; left: 0px; width: 41px;"><div class="ace_gutter-cell " aria-hidden="true" style="height: 20px; top: 0px;">1<span tabindex="0" style="display: none;"></span><span tabindex="0" style="display: none;"><span></span></span></div></div></div><div class="ace_scroller " style="line-height: 20px; left: 0px; right: 0px; bottom: 0px;"><div class="ace_content" style="cursor: default; top: 0px; left: 0px; width: 299px; height: 60px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 620px; visibility: hidden;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height: 20px; top: 0px; left: 0px; right: 0px;"></div></div><div class="ace_layer ace_text-layer" role="listbox" aria-roledescription="Autocomplete suggestions" aria-label="Autocomplete suggestions" aria-activedescendant="suggest-aria-id:0" style="height: 1e+06px; margin: 0px 4px; top: 0px; left: 0px;"><div class="ace_line ace_selected" role="option" aria-roledescription="item" aria-label="DESC" aria-setsize="1" aria-posinset="1" aria-describedby="doc-tooltip" style="height: 20px; top: 0px;" id="suggest-aria-id:0" aria-selected="true"><span class="ace_completion-highlight">DES</span><span class="ace_">C</span><span class="ace_completion-spacer"> </span><span class="ace_completion-meta">SQL</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors" style="opacity: 0;"><div class="ace_cursor" style="display: block; top: 0px; left: 4px; width: 8px; height: 20px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 24px; height: 20px; bottom: 0px; display: none;"><div class="ace_scrollbar-inner" style="width: 24px; height: 20px;">&nbsp;</div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 24px; left: 0px; right: 0px; width: 299px;"><div class="ace_scrollbar-inner" style="height: 24px; width: 280px;">&nbsp;</div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">הההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההה</div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></body></html>
