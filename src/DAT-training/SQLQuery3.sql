@@ -1,1 +1,0 @@
-SELECT first_name, last_name FROM dbo.employees WHERE (salary BETWEEN 8500 AND 13500 OR first_name LIKE 'V%') AND (phone_number IS NOT NULL)

@@ -1,1 +1,0 @@
-SELECT CONCAT(locations.street_address, ', ', locations.postal_code, ', ', locations.city, ', ', locations.state_province), departments.location_id, departments.department_name FROM departments JOIN locations ON departments.location_id = locations.location_id WHERE departments.department_name LIKE '%!_%' ESCAPE '!'
