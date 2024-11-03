@@ -11,3 +11,4 @@ This repository is dedicated to the SQL challenges from [HackerRank](https://www
 - [Basic Join](https://github.com/berserkhmdvhb/SQL-hackerrank/blob/main/src/basic-join.md)
 
 ## DataLemur
+- [Challenges - Level Medium](src/DataLemur/Challenges/Medium)
