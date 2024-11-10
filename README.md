@@ -1,4 +1,4 @@
-![SQL](https://img.shields.io/badge/SQL-Database-blue)
+![SQL](https://img.shields.io/badge/SQL-%20Database%20|%20Queries%20-greyblue)
 
 # SQL-hackerrank
 This repository is dedicated to the SQL challenges from [HackerRank](https://www.hackerrank.com/domains/sql) and [DataLemur](https://www.datalemur.com/) websites.
