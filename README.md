@@ -70,5 +70,28 @@ If instead of condition `k.key IS NULL`, we put `o.key IS NULL`, it returns rows
 But this condition returns rows of ods_table for which there is no match in table `keys_lookup`.
 
 
-**
+**CDC**
+Imagine that we have a table of `identities` again, with a datetimne column name `changedate` that states when there was a change on their account status. Some of the accounts have no date filled due to data quality issues. To report these accounts to business and auditing, now we need a history of these accounts to be included in a separate table named `DatelessAccounts`. The table contains columns `id` and `insertdate` To fill this table (e.g., in a ETL on SSIS job), we need to extract only dateless rows from the main source `identities` that don't exist in destination table `DatelessAccounts`.
+
+```
+WITH
+datelessaccs AS
+(
+    SELECT
+        id
+    FROM identities
+    WHERE changedate IS NULL
+),
+cdc AS
+(
+    SELECT
+        id,
+        GETDATE() AS insertdate
+    FROM datelessacss v
+    LEFT JOIN identities t ON
+        v.id = t.id
+    WHERE t.id IS NULL
+)
+
+```
 
