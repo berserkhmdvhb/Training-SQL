@@ -22,7 +22,8 @@ Suppose we have a `identities` table that has employees information (id, name, e
 We are interested in having both employee info, and complete manager info (manager_id, manager_name, manager_email) in same query:
 
 **Injecting Manager Information**
-```
+
+```sql
 SELECT
     E.emp_id,
     E.emp_name,
@@ -41,7 +42,7 @@ LEFT JOIN
 
 Imagine employee information are in table `identiteies` and we have a subset view of it in `vm_employees`. This view has a column `manager_id`, and we need more manager information (name, mail, etc), so we need to join view with table. But, there are some `manager_id` in the view for which there is no correspnding `emp_id` in the same view (meaning that the manager isn't included as a employee in the view), so in order not to miss manager information for these rows, we need the join with the full table `identities`:
 
- ```
+ ```sql
 SELECT
     v.emp_id,
     v.emp_name,
@@ -58,7 +59,7 @@ LEFT JOIN
 
 **Find Unmatching Rows**
 
-```
+```sql
 SELECT o.*
 FROM ods_table o
 LEFT JOIN keys_lookup k
@@ -73,7 +74,7 @@ But this condition returns rows of ods_table for which there is no match in tabl
 **CDC**
 Imagine that we have a table of `identities` again, with a datetimne column name `changedate` that states when there was a change on their account status. Some of the accounts have no date filled due to data quality issues. To report these accounts to business and auditing, now we need a history of these accounts to be included in a separate table named `DatelessAccounts`. The table contains columns `id` and `insertdate` To fill this table (e.g., in a ETL on SSIS job), we need to extract only dateless rows from the main source `identities` that don't exist in destination table `DatelessAccounts`.
 
-```
+```sql
 WITH
 datelessaccs AS
 (
@@ -92,6 +93,5 @@ cdc AS
         v.id = t.id
     WHERE t.id IS NULL
 )
-
 ```
 
