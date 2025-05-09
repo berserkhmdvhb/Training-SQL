@@ -17,5 +17,5 @@ This repository is dedicated to the SQL challenges from [HackerRank](https://www
 
 
 ## Advanced business Scenarios
-Visit [documentation](./src/README.md
+Visit [documentation](./src/README.md)
 
