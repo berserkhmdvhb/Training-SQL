@@ -155,17 +155,104 @@ WHERE rn = 1;
 ```
 
 ---
+---
 
-## ✅ Summary of Join Techniques
+## 8. Join with Multiple Conditions (Composite Join Key)
 
-| Scenario | Join Type | Pattern |
-|---------|-----------|---------|
-| Self-Referencing (Managers) | Self-Join | `LEFT JOIN identities m ON e.emp_manager_id = m.emp_id` |
-| View → Full Table | Left Join | Use full table for unmatched manager IDs |
-| Find Missing Keys | Anti-Join | `LEFT JOIN ... WHERE other.key IS NULL` |
-| Detect Duplicates | Join + Aggregation or Window | `COUNT(*)` + `GROUP BY` or `ROW_NUMBER()` |
-| Latest Change | Window Function | `ROW_NUMBER() OVER (PARTITION BY ...)` |
+Temporal join based on product and time validity:
+
+```sql
+SELECT s.*, p.price
+FROM sales s
+JOIN prices p
+  ON s.product_id = p.product_id
+ AND s.sale_date BETWEEN p.valid_from AND p.valid_to;
+```
+
+📌 Use case: Time-valid prices, slowly changing dimensions (SCD), etc.
 
 ---
 
-If you'd like to contribute more examples, fork this repo or open a pull request!
+## 9. Semi-Join Using EXISTS (Efficient Filtering)
+
+Use `EXISTS` to efficiently check for existence without bringing in duplicate rows:
+
+```sql
+SELECT *
+FROM orders o
+WHERE EXISTS (
+    SELECT 1
+    FROM approved_customers a
+    WHERE o.customer_id = a.customer_id
+);
+```
+
+✅ Improves performance compared to `IN` or `LEFT JOIN ... IS NOT NULL`.
+
+---
+
+## 10. Join with NULL-Safe Conditions (`COALESCE`)
+
+Match rows where NULLs should be treated as equal using `COALESCE`:
+
+```sql
+SELECT *
+FROM table_a a
+JOIN table_b b
+  ON COALESCE(a.col1, 'default') = COALESCE(b.col1, 'default');
+```
+
+⚠️ Use with care in large joins — may impact index usage.
+
+---
+
+## 11. Self-Anti-Join for Top N per Group
+
+Get the latest **N versions** of records per entity (e.g., last 3 updates):
+
+```sql
+WITH ranked_versions AS (
+    SELECT *,
+           ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY version_date DESC) AS rn
+    FROM user_versions
+)
+SELECT *
+FROM ranked_versions
+WHERE rn <= 3;
+```
+
+---
+
+## 12. Detect Mismatches (Full Outer Join + NULL-Safe Comparison)
+
+Identify differences between staging and production tables:
+
+```sql
+SELECT *
+FROM staging_data s
+FULL OUTER JOIN prod_data p
+  ON s.id = p.id
+WHERE s.col1 IS DISTINCT FROM p.col1;
+```
+
+✅ `IS DISTINCT FROM` handles NULLs safely (unlike `<>` or `!=`).
+
+---
+
+## 13. Join with Aggregated Subquery
+
+Join a dimension table with an aggregate metric per entity:
+
+```sql
+SELECT c.customer_id, c.name, sp.total_spent
+FROM customers c
+LEFT JOIN (
+    SELECT customer_id, SUM(amount) AS total_spent
+    FROM payments
+    GROUP BY customer_id
+) sp ON c.customer_id = sp.customer_id;
+```
+
+💡 Good for reporting KPIs and performance dashboards.
+
+---
